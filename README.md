@@ -168,11 +168,11 @@ IT also has a responsive BMi Table to compare your results. It also include a Bo
 
 ### Demo: https://bmi-calcuator.netlify.app/
 
-## 17. OHm's Law Calculator
+## 17. Ohm's Law Calculator
 
 Simple to use Ohm's Law Calculator. Calculate Power, Current, Voltage or Resistance. Just enter 2 known values and the calculator will solve for the others. All these are made using Pure Javascript.
 
-<img src="screeenshot/ohm1.png" width="350" title="hover text"> <img src="screeenshot/ohm2.png" width="350" title="hover text">
+<img src="screeenshot/ohm1.png" width="350" title="hover text"> <img src="screeenshot/ohms2.png" width="350" title="hover text">
 
 ### Demo: https://ohm-law.netlify.app/
 
