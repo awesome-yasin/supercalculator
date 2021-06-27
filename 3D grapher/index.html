@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="assets/css/materialize.css">
+    <link rel="stylesheet" href="assets/css/mathquill.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+
+<title>SuperCalculator - 3D Graphing Calculator</title>
+
+   
+</head>
+
+<body>
+    <h4 style="text-align: center; font-weight: bold;">3D Graphing Calculator</h4>
+    <div class="row">
+        <div class="eqs-col col s4" id="eq-sidebar">
+        </div>
+
+        <div class="black graph-col col s8" style="height:100%; position:relative;">
+            <div id="ThreeJS"></div>
+            <div id="ThreeJS-axes"></div>
+            <div id="controls-container" class="teal">
+            </div>
+            <div id="trace-info-container" style="display: none">Trace: None</div>
+
+            <div id="progress-info-container" style="opacity: 0">
+                <div style="position: absolute; left: 50%">
+                    <span>LOADING</span>
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <h4 class="awesome">Plot of 3D Functions</h4>
+        <div class="para">
+        <p>This procedure is similar to X-Y-Z Grid Plot except that instead of reading the grid values from the data matrix, it will produce its own grid from a function and intervals supplied by the user.</p>
+        <p>All controls except F(X,Y) and Plot Frequency will work in exactly the same way as they do in 3D Plots procedure. The F(X,Y) field is used for entering a formula in terms of the variables X and Y. No other variable names can be used. Either type the formula directly into the text box or double-click on it to open the Formula Editor dialogue. Plot of Functions.</p>
+        <p>The Plot Frequency control will regulate the resolution of plots. The highest resolution is obtained when this field is set to 1. In this case the function will be evaluated 50 times for each axis giving a total of 2,500 function evaluations. The lowest resolution is 10, which means that the maximum grid size 50 will be divided by 10, giving 5 polygons (or 5 bars or 5 points) for each axis.</p>
+        <p>Since computing the grid elements from the supplied function may be a time consuming process, it will not be repeated whenever a graph property is changed. For instance the grid will not be recomputed if changes are made in the main title, sub title, X, Y and Z axis labels, minimum, maximum and interval values of the Z axis, type, rotation, grid and colours fields. If changes are made in one of minimum, maximum X or Y-axis values, the definition of function or the Plot Frequency, then the whole grid will be recomputed.</p>
+    </div>
+    </div>
+   
+    <div class="containerz">
+  <h4 class="awesome">All Available Functions</h4>
+  <h5 style="font-size: 20px; font-weight: 700;">Operators</h5>
+        <div class="layoutz">
+          <p class="colz col-mainz">
+            <strong>Addition operator</strong><br> 
+      
+          </p>
+          <p class="colz col-complementaryz" role="complementary">
+            <strong>+</strong><br> 
+          </p>  
+        </div>   
+        <div class="layoutz">
+            <p class="colz col-mainz">
+              <strong>Subtraction operator</strong><br> 
+        
+            </p>
+            <p class="colz col-complementaryz" role="complementary">
+              <strong>-</strong><br> 
+            </p>  
+          </div> 
+          <div class="layoutz">
+            <p class="colz col-mainz">
+              <strong>Multiplication operator</strong><br> 
+        
+            </p>
+            <p class="colz col-complementaryz" role="complementary">
+              <strong>*</strong><br> 
+            </p>  
+          </div> 
+          <div class="layoutz">
+            <p class="colz col-mainz">
+              <strong>Division operator</strong><br> 
+        
+            </p>
+            <p class="colz col-complementaryz" role="complementary">
+              <strong>	/</strong><br> 
+            </p>  
+          </div> 
+          <div class="layoutz">
+            <p class="colz col-mainz">
+              <strong>Exponent (Power) operator</strong><br> 
+        
+            </p>
+            <p class="colz col-complementaryz" role="complementary">
+              <strong>^</strong><br> 
+            </p>  
+          </div> 
+          <div class="layoutz">
+            <p class="colz col-mainz">
+              <strong>Base operator</strong><br> 
+        
+            </p>
+            <p class="colz col-complementaryz" role="complementary">
+              <strong>_</strong><br> 
+            </p>  
+          </div> 
+          <h5 style="font-size: 20px; font-weight: 700; margin-top: 15px;">Functions</h5>
+ 
+            
+          <div class="layoutz">
+            <p class="colz col-mainz">
+              <strong>Square Root of a value or expression.</strong><br> 
+        
+            </p>
+            <p class="colz col-complementaryz" role="complementary">
+              <strong>sqrt</strong><br> 
+            </p>  
+          </div>   
+          <div class="layoutz">
+              <p class="colz col-mainz">
+                <strong>sine of a value or expression</strong><br> 
+          
+              </p>
+              <p class="colz col-complementaryz" role="complementary">
+                <strong>sin</strong><br> 
+              </p>  
+            </div> 
+            <div class="layoutz">
+              <p class="colz col-mainz">
+                <strong>cosine of a value or expression</strong><br> 
+          
+              </p>
+              <p class="colz col-complementaryz" role="complementary">
+                <strong>cos</strong><br> 
+              </p>  
+            </div> 
+            <div class="layoutz">
+              <p class="colz col-mainz">
+                <strong>tangent of a value or expression</strong><br> 
+          
+              </p>
+              <p class="colz col-complementaryz" role="complementary">
+                <strong>tan</strong><br> 
+              </p>  
+            </div> 
+            <div class="layoutz">
+              <p class="colz col-mainz">
+                <strong>inverse sine (arcsine) of a value or expression</strong><br> 
+          
+              </p>
+              <p class="colz col-complementaryz" role="complementary">
+                <strong>asin</strong><br> 
+              </p>  
+            </div> 
+            <div class="layoutz">
+              <p class="colz col-mainz">
+                <strong>inverse cosine (arccos) of a value or expression</strong><br> 
+          
+              </p>
+              <p class="colz col-complementaryz" role="complementary">
+                <strong>acos</strong><br> 
+              </p>  
+            </div> 
+
+            <div class="layoutz">
+                <p class="colz col-mainz">
+                  <strong>inverse tangent (arctangent) of a value or expression</strong><br> 
+            
+                </p>
+                <p class="colz col-complementaryz" role="complementary">
+                  <strong>atan</strong><br> 
+                </p>  
+              </div>   
+              <div class="layoutz">
+                  <p class="colz col-mainz">
+                    <strong>Hyperbolic sine (sinh) of a value or expression</strong><br> 
+              
+                  </p>
+                  <p class="colz col-complementaryz" role="complementary">
+                    <strong>sinh</strong><br> 
+                  </p>  
+                </div> 
+                <div class="layoutz">
+                  <p class="colz col-mainz">
+                    <strong>Hyperbolic cosine (cosh) of a value or expression</strong><br> 
+              
+                  </p>
+                  <p class="colz col-complementaryz" role="complementary">
+                    <strong>cosh</strong><br> 
+                  </p>  
+                </div> 
+                <div class="layoutz">
+                  <p class="colz col-mainz">
+                    <strong>Hyperbolic tangent (tanh) of a value or expression</strong><br> 
+              
+                  </p>
+                  <p class="colz col-complementaryz" role="complementary">
+                    <strong>tanh</strong><br> 
+                  </p>  
+                </div> 
+                <div class="layoutz">
+                  <p class="colz col-mainz">
+                    <strong>e (the Euler Constant) raised to the power of a value or expression</strong><br> 
+              
+                  </p>
+                  <p class="colz col-complementaryz" role="complementary">
+                    <strong>exp</strong><br> 
+                  </p>  
+                </div> 
+                <div class="layoutz">
+                  <p class="colz col-mainz">
+                    <strong>The natural logarithm of a value or expression</strong><br> 
+              
+                  </p>
+                  <p class="colz col-complementaryz" role="complementary">
+                    <strong>ln</strong><br> 
+                  </p>  
+                </div> 
+                <div class="layoutz">
+                    <p class="colz col-mainz">
+                      <strong>The base-10 logarithm of a value or expressioN</strong><br> 
+                
+                    </p>
+                    <p class="colz col-complementaryz" role="complementary">
+                      <strong>log</strong><br> 
+                    </p>  
+                  </div>   
+                  <div class="layoutz">
+                      <p class="colz col-mainz">
+                        <strong>Returns the largest (closest to positive infinity) value that is not greater than the argument and is equal to a mathematical integer.</strong><br> 
+                  
+                      </p>
+                      <p class="colz col-complementaryz" role="complementary">
+                        <strong>floor</strong><br> 
+                      </p>  
+                    </div> 
+                    <div class="layoutz">
+                      <p class="colz col-mainz">
+                        <strong>Returns the smallest (closest to negative infinity) value that is not less than the argument and is equal to a mathematical integer.</strong><br> 
+                  
+                      </p>
+                      <p class="colz col-complementaryz" role="complementary">
+                        <strong>ceil</strong><br> 
+                      </p>  
+                    </div> 
+                    <div class="layoutz">
+                      <p class="colz col-mainz">
+                        <strong>Round to the nearest integer. Examples: round(-2.5) = -2, round(-0.1) = 0, round(0.1) = 0, round(2.5) = 3</strong><br> 
+                  
+                      </p>
+                      <p class="colz col-complementaryz" role="complementary">
+                        <strong>round</strong><br> 
+                      </p>  
+                    </div> 
+                    <div class="layoutz">
+                      <p class="colz col-mainz">
+                        <strong>Sign (+1 or -1) of a value or expression</strong><br> 
+                  
+                      </p>
+                      <p class="colz col-complementaryz" role="complementary">
+                        <strong>sign</strong><br> 
+                      </p>  
+                    </div> 
+                    <div class="layoutz">
+                      <p class="colz col-mainz">
+                        <strong>Absolute value (distance from zero) of a value or expression</strong><br> 
+                  
+                      </p>
+                      <p class="colz col-complementaryz" role="complementary">
+                        <strong>abs</strong><br> 
+                      </p>  
+                    </div> 
+      </div>
+      
+      
+      
+      
+    <div>
+        <h4 class="awesome">
+            Try these awesome Graphs
+        </h4>
+        <div class="wrapper">
+
+           
+                
+        <section class="columns">
+            
+            <div class="column">
+                <h2>Water Ripple 3D Equation</h2>
+                <p class="equation">sin(10(x^2+y^2))/10</p>
+                <img src="https://www.benjoffe.com/img/functions3d/examples/ripple.png" alt="" srcset="">
+            </div>
+            
+            <div class="column">
+                <h2>Paper Plane 3D Equation</h2>
+                <p class="equation">sign(x) * atan(x*80)/6 * sign(-y-x+1) * sign(-y+x+1)*5 - 1.01</p>
+                <img src="https://www.benjoffe.com/img/functions3d/examples/paperplane.png" alt="" srcset="">
+            </div>
+          
+          <div class="column">
+                <h2>Mosque Dome 3D Function</h2>
+                <p class="equation">0.7/log(x^2+y^2)+.6</p>
+                <img src="https://www.benjoffe.com/img/functions3d/examples/mosquedome.png" alt="" srcset="">
+            </div>
+            
+        </section>	
+        <section class="columns">
+            
+            <div class="column">
+                <h2>Top Hat 3D Equation</h2>
+                <p class="equation">(sign(0.2-(x^2+y^2)) + sign(0.2-(x^2/3+y^2/3)))/3-1</p>
+                <img src="https://www.benjoffe.com/img/functions3d/examples/tophat.png" alt="" srcset="">
+            </div>
+            
+            <div class="column">
+                <h2>Paper Plane 3D Equation</h2>
+                <p class="equation">sign(x) * atan(x*80)/6 * sign(-y-x+1) * sign(-y+x+1)*5 - 1.01</p>
+                <img src="https://www.benjoffe.com/img/functions3d/examples/windmill.png" alt="" srcset="">
+            </div>
+          
+          <div class="column">
+                <h2>Intersecting Fences</h2>
+                <p class="equation">0.75/exp((x*5)^2*(y*5)^2)</p>
+                <img src="https://www.benjoffe.com/img/functions3d/examples/intersectingfences.png" alt="" srcset="">
+            </div>
+            
+        </section>	
+        <section class="columns">
+            
+            <div class="column">
+                <h2>Interlock Equation</h2>
+                <p class="equation">(3x/2)^4 + (3x)^4 + z^4 = 1,
+                    (3x)^4 + y^4 + (3z/2)^4 = 1,
+                    x^4 + (3y/2)^4 + (3z)^4 = 1</p>
+                <img src="https://mzrg.com/math/grf06.png" alt="" srcset="" style="width: 250px; height: 250px;">
+            </div>
+            
+            <div class="column">
+                <h2>Scatered Equation</h2>
+                <p class="equation">Cos(x) + Cos(y) + Cos(z) + Sin(x) + Sin(y) + Sin(z) = 2.2</p>
+                <img src="https://mzrg.com/math/grf08.png" alt="" srcset="" style="width: 250px; height: 250px;">
+            </div>
+          
+          <div class="column">
+                <h2>Unamed Equation</h2>
+                <p class="equation">r = Tan(17 theta) + Cot(17 theta)</p>
+                <img src="https://mzrg.com/math/grf13.png" alt="" srcset=""  style="width: 250px; height: 250px;">
+            </div>
+            
+        </section>	
+            
+           
+        
+        </div>
+    </div>
+
+    <!-- core -->
+    <script src="bundle.js"></script>
+
+
+</body>
+
+</html>

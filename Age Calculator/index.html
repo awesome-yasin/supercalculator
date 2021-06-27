@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Binary Calculator. Use the following calculators to perform the addition, subtraction, multiplication, or division of two binary values, as well as convert binary values to Decimal Hex-Decimal and ASCII."/>
+  <link rel="stylesheet" href="style.css">
+  <title>SuperCalculator - Age Calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1 class="h1" style="text-align: center; color: white;">Age Calculator</h1>
+ <div class="main">
+  <table width="320px;;" border="0" cellspacing="0" cellpadding="0" style='text-align:center;vertical-align:middle'>
+    <tbody>
+      <tr>
+        <td>
+          <div class="husband">
+          <p style="text-align: center; color: white;"><b>Select Date of Birth:</b></p>
+          <form name="birthday">
+            <div class="wife">
+              <div class="son">
+              <span class="date" style="font-weight: bold; color: white;">Date</span>&nbsp;<b class="dot" style="font-weight: bold; color: white;">:</b>&nbsp;
+              <select name="day" size="1" class="sel-light">
+                <script
+                  type="text/javascript">for (var j = 1; j < 32; j++)document.write("<option value=" + j + ">" + j + "</option>");</script>
+              </select>
+
+              <span class="date month" style="font-weight: bold; color: white;">Month</span>&nbsp;<b class="dot" style="font-weight: bold; color: white;">:</b>
+              <select name="month" size="1" class="sel-light">
+                <script
+                  type="text/javascript">for (var i = 1; i < 13; i++)document.write("<option value=" + i + ">" + mS[i - 1] + "</option>");</script>
+              </select>
+
+              <span class="date" style="font-weight: bold; color: white;">Year</span>&nbsp;<b class="dot" style="font-weight: bold; color: white;">:</b>&nbsp;
+              <select name="year" size="1" class="sel-light">
+                <script
+                  type="text/javascript">for (var k = startyear; k <= endyear; k++)document.write("<option value=" + k + ">" + k + "</option>");</script>
+              </select>
+              </div>
+            </div>
+            </div>
+            <p style="text-align:center;">
+              <input class="btn-bubble btn" name="start" onclick="calage()" value="Calculate" type="button"
+                style="width:100px; margin: 0 auto;">
+            </p>
+
+            <input name="age" value="Result">
+            <p class="date1" style="color: white;">You have been living for:</p>
+            <table class="table-condensed">
+              <tbody>
+                <tr>
+                  <td class="date-red">In months</b></td>
+                  <td><input name="months"></td>
+                </tr>
+                <tr>
+                  <td class="date-red">In days</td>
+                  <td><input name="daa"></td>
+                </tr>
+                <tr>
+                  <td class="date-red">In hours</td>
+                  <td><input name="hours"></td>
+                </tr>
+                <tr>
+                  <td class="date-red">In minutes</td>
+                  <td><input name="min"></td>
+                </tr>
+                <tr>
+                  <td class="date-red">In seconds</td>
+                  <td><input name="sec"></td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="date-red">Your next birthday:</b>&nbsp;&nbsp;<input name="nbday" style="width: 40%;"></td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </td>
+        <td width="10">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+</div>
+  <h5 style="text-align: center; color: white;">Copyright &#169; 2020 Yasin Ansari<br/>
+
+    <script language="JavaScript" type="text/javascript">
+    document.write("Last Modified:  " + document.lastModified);
+    </script></h5>
+
+</body>
+
+</html>
