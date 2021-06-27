@@ -211,3 +211,17 @@ Try this awesome 3-D function grphing calculator to make 3d graphs. Its also con
 <img src="screeenshot/3d.png" width="650" title="hover text">
 
 ### Demo: https://3d-grapher.netlify.app/
+
+# Technologies Used:
+
+To make it beginner friendly Ive only used:
+
+1. HTML
+2. CSS
+3. Javascript
+4. Jquery (in only one section)
+5. API's
+
+# Contribution
+
+If you want to contribute to this project and make it better with new ideas, your pull request is very welcomed. If you find any issue just put it in the repository issue section, thank you.
