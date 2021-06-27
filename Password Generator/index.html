@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+  <title>SuperCalculator - Password Generator and Checker</title>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">Password Generator</h2>
+    <div class="result">
+      <div class="result__title field-title">Generated Password</div>
+      <div class="result__info right">click to copy</div>
+      <div class="result__info left">copied</div>
+      <div class="result__viewbox" id="result">CLICK GENERATE</div>
+      <button id="copy-btn" style="--x: 0; --y: 0"></button>
+    </div>
+    <div class="length range__slider" data-min="4" data-max="32">
+      <div class="length__title field-title" data-length='0'>length:</div>
+      <input id="slider" type="range" min="4" max="32" value="16" />
+    </div>
+
+    <div class="settings">
+      <span class="settings__title field-title">settings</span>
+      <div class="setting">
+        <input type="checkbox" id="uppercase" checked />
+        <label for="uppercase">Include Uppercase</label>
+      </div>
+      <div class="setting">
+        <input type="checkbox" id="lowercase" checked />
+        <label for="lowercase">Include Lowercase</label>
+      </div>
+      <div class="setting">
+        <input type="checkbox" id="number" checked />
+        <label for="number">Include Numbers</label>
+      </div>
+      <div class="setting">
+        <input type="checkbox" id="symbol" />
+        <label for="symbol">Include Symbols</label>
+      </div>
+    </div>
+    <button class="btn generate" id="generate">Generate Password</button>
+    <div id="logged_out_generator" style="margin-top: 30px;">
+      <h1 style="font-size:26px; color: #fff;">How secure is your password?</h1>
+
+      <div style="margin-top: 20px;"><span style="float:center; color: #fff; font-size: 20px; top: 20px;"><label
+            for="showhide">Show password:
+          </label><input type="checkbox" id="showhide" id="small" onclick="toggleShowHide(this)"
+            style="width: 20px; height: 20px; margin-left: 10px;" /></span></div>
+      <div id="complexity">
+        <input id="lgd_out_pg_pass" type="password" onkeyup="checkThisPassword(this.value);"
+          placeholder="Type a password" value="" style="outline: 0; border: none;" />
+        <span id="complexity-span" class="pmshow">No Password</span>
+      </div>
+      <div class="generate_button chars_holder">
+        <div class="char_type" id="special_count">
+          <span class="char_type_text" style="padding-right:16px ">Symbols</span>
+        </div>
+        <div class="char_type" id="digits_count">
+          <span class="char_type_text" style="padding-right:13px">Numbers</span>
+        </div>
+        <div class="char_type" id="upper_count">
+          <span class="char_type_text">Upper case</span>
+        </div>
+        <div class="char_type" id="lower_count">
+          <span class="char_type_text">Lower case</span>
+        </div> <br> <br>
+        <div class="breaker">&nbsp;</div>
+      </div>
+      <div class="result col_left">
+        Time to crack your password:<span id="first_estimate">
+          <h1>0 second</h1>
+        </span>
+        <p style="margin-top: 5px;"> Your passwords are never stored </p>
+      </div>
+    </div>
+    <script src="zxcvbn.js" type="text/javascript"></script>
+    <script src="pwd-chk.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

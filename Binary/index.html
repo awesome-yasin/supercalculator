@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <title>SuperCalculator - Binary Calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+  <div class="calculator">
+    <h2 class="covid">Arthematic Calculator</h2>
+    <div class="choose">
+      <p>First Number Input in :</p>
+      <form>
+        <label> <input class="ip" id="bin" type="radio" name="input" value="bin" onclick="setr();dis();disbutton();">
+          <span>Binary</span></label>
+        <label> <input class="ip" id="oct" type="radio" name="input" value="oct" onclick="setr();dis();disbutton();">
+          <span>Octal</span> </label>
+        <label> <input class="ip" id="dec" type="radio" name="input" value="dec"
+            onclick="setr();dis();disbutton();"><span>Decimal</span> </label>
+        <label> <input class="ip" id="hex" type="radio" name="input" value="hex" onclick="setr();dis();disbutton();">
+          <span>Hexa-decimal</span> </label>
+      </form>
+      <p>Second Number Input in :</p>
+      <form>
+        <label> <input class="ip" id="opbin" type="radio" name="input" value="bin"> <span>Binary</span> </label>
+        <label> <input class="ip" id="opoct" type="radio" name="input" value="oct"> <span>Octal</span> </label>
+        <label> <input class="ip" id="opdec" type="radio" name="input" value="dec"> <span>Decimal</span> </label>
+        <label> <input class="ip" id="ophex" type="radio" name="input" value="hex"> <span>Hexa-Decimal</span> </label>
+      </form>
+      <p>Output in :</p>
+      <form>
+        <label> <input class="ip" id="fbin" type="radio" name="input" value="bin"> <span>Binary</span> </label>
+        <label> <input class="ip" id="fdec" type="radio" name="input" value="oct"> <span>Octal</span> </label>
+        <label> <input class="ip" id="foct" type="radio" name="input" value="dec"><span>Decimal</span> </label>
+        <label> <input class="ip" id="fhex" type="radio" name="input" value="hex"> <span>Hexa-Decimal</span> </label>
+      </form>
+      <p>Operation to perform:</p>
+      <form>
+        <label> <input class="ip" id="add" type="radio" name="input" value="Add"><span>Addition</span> </label>
+        <label> <input class="ip" id="sub" type="radio" name="input" value="Subtract"><span>Substraction</span> </label>
+        <label> <input class="ip" id="mul" type="radio" name="input" value="Multiply"><span>Multiplication</span>
+        </label>
+        <label> <input class="ip" id="div" type="radio" name="input" value="Divide"><span>Division</span> </label>
+      </form>
+    </div>
+    <br />
+
+    <form id="format">
+      <input class="box input" id="box1" type="text" placeholder="First Number" onclick="" /><br />
+      <input class="box input" id="box2" type="text" placeholder="Second Number" />
+    </form>
+
+
+
+    <form class="button">
+      <input type="button" class="clear" value="Submit" onclick="process();" />
+      <input type="button" class="clear" value="Clear" onclick="clr();" />
+    </form>
+    <div class="ans">
+      Answer &#61; <span id="ans"></span>
+    </div>
+
+    <br />
+
+
+    <h1 class="title">Binary, Decimal and Hex Converter</h1>
+    <div class="container">
+      <div class="section">
+        <div class="heading">
+          <h2 style="text-align: center;">Binary</h2>
+
+        </div>
+        <input type="text" name="binary" id="binary">
+        <div class="btns">
+          <button class="btn" id="bToD">To Decimal</button>
+          <button class="btn" id="bToH">To Hex</button>
+        </div>
+        <span class="output selectable" id="bOutput"></span>
+      </div>
+      <div class="section">
+        <div class="heading">
+          <h2 style="text-align: center;">Decimal</h2>
+
+        </div>
+        <input type="text" name="decimal" id="decimal">
+        <div class="btns">
+          <button class="btn" id="dToB">To Binary</button>
+          <button class="btn" id="dToH">To Hex</button>
+        </div>
+        <span class="output selectable" id="dOutput"></span>
+      </div>
+      <div class="section">
+        <div class="heading">
+          <h2 style="text-align: center;">Hexa-decimal</h2>
+
+        </div>
+        <input type="text" name="hexadecimal" id="hexadecimal">
+        <div class="btns">
+          <button class="btn" id="hToB">To Binary</button>
+          <button class="btn" id="hToD">To Decimal</button>
+        </div>
+        <span class="output selectable" id="hOutput"></span>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class='wrapper'>
+
+    <div class='content'>
+      <p class="fucking">Text(ASCII) to Binary Converter</p>
+      <div class='human'>
+        <p class="fucking-2">Text Input</p>
+        <div class='face'>
+
+        </div>
+        <div class='io' contenteditable='true'></div>
+      </div>
+      <div class='machine'>
+        <p class="fucking-2">Binary Output</p>
+        <div class='face'>
+
+        </div>
+        <div class='io' contenteditable='true'></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="main.js"></script>
+  <h5 style=" text-align: center; margin-top: 200px; color: white;">Copyright &#169; 2020 Yasin Ansari<br />
+
+    <script language="JavaScript" type="text/javascript">
+      document.write("Last Modified:  " + document.lastModified);
+    </script>
+  </h5>
+</body>
+
+</html>

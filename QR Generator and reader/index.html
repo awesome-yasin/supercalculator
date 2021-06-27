@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+  <title>SuperCalculator - QR Generator and Reader</title>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="container">
+    <h2>QR Generator</h2>
+    <form action="" autocomplete="false">
+      <input id="input" type="text" class="input-qr" id="data" type="text" autocomplete="off"
+        onkeyup="triggerCreateQRCode()" placeholder="www.example.com" onfocus="this.placeholder=''"
+        onblur="this.placeholder='www.example.com'">
+    </form>
+    <div class="out-qr-show">
+      <img srcset="#" download>
+        <div id="qrcode" class="qr-show"></div>
+      </a>
+      <h5 style="text-align: center; color: white;">Copyright &#169; 2020 Yasin Ansari<br />
+
+        <script language="JavaScript" type="text/javascript">
+          document.write("Last Modified:  " + document.lastModified);
+        </script>
+      </h5>
+    </div>
+  </div>
+  <div class="container">
+    <h2>QR Reader</h2>
+    <div style="width: 400px" id="reader"></div>
+    <div id="scanned-result"></div>
+    <h5 style="text-align: center; color: white;">Copyright &#169; 2020 Yasin Ansari<br />
+
+      <script language="JavaScript" type="text/javascript">
+        document.write("Last Modified:  " + document.lastModified);
+      </script>
+    </h5>
+  </div>
+  <script src="qr.js"></script>
+  <script src="reader.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

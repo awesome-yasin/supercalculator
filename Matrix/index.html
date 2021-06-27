@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="styles.css">
+  <title>SuperCalculator - Matric Calculator</title>
+</head>
+
+<body>
+<div class="fucking-main">
+  <h1 style="text-align: center;">Matrix Calculator</h1>
+  <div class="fucking-child">
+  <table cellpadding="15" cellspacing="15" width="750">
+    <tr>
+      <td width="250">
+        <form name="A">
+          <p>Matrix <b>A</b> :<br />
+            <input autocomplete="off" type="text" name="a11" size="4"> <input autocomplete="off" type="text" name="a12"
+              size="4"> <input autocomplete="off" TYPE="text" NAME="a13" SIZE="4"> <br />
+            <input autocomplete="off" type="text" name="a21" size="4"> <input autocomplete="off" type="text" name="a22" size="4"> <input autocomplete="off"
+              TYPE="text" NAME="a23" SIZE="4"> <br />
+            <input autocomplete="off" type="text" name="a31" size="4"> <input autocomplete="off" type="text" name="a32" size="4"> <input autocomplete="off"
+              TYPE="text" NAME="a33" SIZE="4"> </p>
+          <p><input autocomplete="off" class="fucking-button" type="reset" value="Clear A" size="5"></p>
+        </form>
+      </td>
+      <td width="250">
+        <form name="B">
+          <p>Matrix <b>B</b> :<br />
+            <input autocomplete="off" type="text" name="a11" size="4"> <input autocomplete="off" type="text" name="a12" size="4"> <input autocomplete="off"
+              TYPE="text" NAME="a13" SIZE="4"> <br />
+            <input autocomplete="off" type="text" name="a21" size="4"> <input autocomplete="off" type="text" name="a22" size="4"> <input autocomplete="off"
+              TYPE="text" NAME="a23" SIZE="4"> <br />
+            <input autocomplete="off" type="text" name="a31" size="4"> <input autocomplete="off" type="text" name="a32" size="4"> <input autocomplete="off"
+              TYPE="text" NAME="a33" SIZE="4"> </p>
+          <p><input autocomplete="off" class="fucking-button" type="reset" value="Clear B" size="5"></p>
+        </form>
+      </td>
+      <td width="250">
+        <form name="C">
+          <p>Resultant Matrix (R):<br />
+            <input autocomplete="off" type="text" name="a11" size="4"> <input autocomplete="off" type="text" name="a12" size="4"> <input autocomplete="off" TYPE="text"
+              NAME="a13" SIZE="4"> <br />
+            <input autocomplete="off" type="text" name="a21" size="4"> <input autocomplete="off" type="text" name="a22" size="4"> <input autocomplete="off" TYPE="text"
+              NAME="a23" SIZE="4"> <br />
+            <input autocomplete="off" type="text" name="a31" size="4"> <input autocomplete="off" type="text" name="a32" size="4"> <input autocomplete="off" TYPE="text"
+              NAME="a33" SIZE="4"> </p>
+          <p><input autocomplete="off" class="fucking-button" type="reset" value="Clear R" size="5"></p>
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <table cellspacing="5" cellpadding="5">
+    <tr>
+      <td valign="TOP" class="fucking">
+        <form name="ReArrange">
+          <table width="150">
+            <tr>
+              <th>ReArrange</th>
+            </tr>
+            <tr>
+              <td><input type="button" value="R --&gt; A" class="fucking-button" onClick="swap(C,A)"></td>
+              <td><input type="button" value="R --&gt; B" class="fucking-button" onClick="swap(C,B)"></td>
+              <td><input type="button" value="A --&gt; B" class="fucking-button" onClick="swap(A,B)"></td>
+             
+            </tr>
+            <tr>
+              <td><input type="button" value="B --&gt; A" class="fucking-button" onClick="swap(B,A)"></td>
+              <td><input type="button" value="A --&gt; R" class="fucking-button" onClick="swap(A,C)"></td>
+            </tr>
+           
+          </table>
+        </form>
+      </td>
+      <td valign="TOP">
+        <form name="Operations">
+          <table width="250">
+            <tr>
+              <th colspan="2">Operations</th>
+            </tr>
+            <tr>
+              <td><input type="button" class="fucking-button" value="A + B = R" onClick="add(A,B,C)"></td>
+              <td><input type="button" class="fucking-button" value="adj(A) = R" onClick="adj(A,C)"></td>
+            </tr>
+            <tr>
+              <td><input type="button" class="fucking-button" value="A * B = R" onClick="mult(A,B,C)"></td>
+              <td><input type="button" class="fucking-button" value="inv(A) = R" onClick="inv(A,deta,C)"> </td>
+            </tr>
+            <tr>
+              <td><input type="button" class="fucking-button" value="B * A = R" onClick="mult(B,A,C)"></td>
+              <td><input type="button" class="fucking-button" value="inv(B) = R" onClick="inv(B,detb,C)"> </td>
+            </tr>
+          </table>
+        </form>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td valign="TOP">
+        <table width="300">
+          <tr>
+            <th>Determinant</th>
+          </tr>
+          <tr>
+            <td>
+              <form name="deta">
+                <p><input type="button" value="det(A)" onClick="det(A, deta)"> <input TYPE="text" NAME="output"
+                    SIZE="10"></p>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form name="detb">
+                <p><input type="button" value="det(B)" onClick="det(B,detb)"> <input TYPE="text" NAME="output"
+                    SIZE="10"> </p>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </div>
+</div>
+  <script src="scripts.js"></script>
+  <h5 style="text-align: center; color: white;">Copyright &#169; 2020 Yasin Ansari<br/>
+
+    <script language="JavaScript" type="text/javascript">
+    document.write("Last Modified:  " + document.lastModified);
+    </script></h5>
+</body>
+
+</html>

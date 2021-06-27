@@ -1,0 +1,771 @@
+/* Author: Voltaire Bazurto Blacio */
+/* Mortgage calculator responsive styling */
+
+/* Default rules assume mobile screen size */
+
+
+/* UI Form controls styling */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Range styles */
+
+input[type=range] {
+  cursor: pointer;
+  height: 10px;
+  border-radius: 15px;
+  margin: 3.55px 0;
+  background-color: #cacaca;
+  outline: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+/* Sliders styles */
+/* Chrome & Safari exclusives*/
+/* Chrome 28+, Safari 9+ only*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @supports (not (-ms-accelerator:true)) and (not (-ms-ime-align:auto))
+    and (not (-moz-appearance:none)) {
+
+
+    input[type=range] {
+      cursor: pointer;
+      height: 9px;
+      border-radius: 15px;
+      -webkit-appearance: none;
+      margin: 3.55px 0;
+      background: #cacaca;
+      outline: none;
+      transition: background 450ms ease-in;
+    }
+
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 9px;
+      -webkit-appearance: none;
+      cursor: pointer;
+      border-radius: 15px;
+      border: #cacaca;
+    }
+    
+    input[type=range]::-webkit-slider-thumb {
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.27), 0px 0px 1px rgba(13, 13, 13, 0.27);
+      border: 2.3px solid white;
+      height: 15px;
+      width: 15px;
+      border-radius: 15px;
+      background: #ffffff;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -3.55px;
+    }
+
+  }
+
+}
+
+/* FireFox */
+input[type="range"]::-moz-range-progress {
+  background-color: #1091cc;
+  height: 12px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #cacaca;
+  width: 100%;
+  height: 12px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.27), 0px 0px 1px rgba(13, 13, 13, 0.27);
+  border: 2.3px solid #ffffff;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* IE */
+
+/* IE Edge 12+ CSS styles go here */ 
+@supports (-ms-ime-align:auto) { 
+  input[type=range]{
+    height: auto;
+    background-color: transparent;
+  }
+}
+
+/* IE 11+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    input[type=range]{
+      height: auto;
+      background-color: transparent;
+      position: relative;
+      top: 8px;
+      padding: 0px;
+      margin: 0px;
+    }
+
+}
+
+
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+
+  border-width: 6px 0;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #1091cc;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #cacaca;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.27), 0px 0px 1px rgba(13, 13, 13, 0.27);
+  border:  2.3px solid #ffffff;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #1091cc;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #cacaca;
+}
+
+
+/* DOM elems style. Layout styling based on flex box model for
+responsive design */
+
+body, button{
+  font-family: 'Helvetica Neue', 'Open Sans', 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+body{
+  padding: 25px 10px 0px 10px;
+  margin: 0px;
+  
+  height: 100vh;
+
+}
+
+.main-container{
+  height: 100vh;
+}
+
+
+#results{
+  background-color: #eaf6fa;
+  padding: 0px 12px 26px 20px;
+  flex-grow: 1 ;
+
+  align-self: center;
+  margin: 0px;
+
+  position: relative;
+  top: -430px;
+  z-index: -50;
+  height: 289px;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Dynamic for switching to mobile sytiling using js */
+.resultsMobile{
+  position: relative;
+  top: -430px; 
+  z-index: -50;
+  height: 289px;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Dynamic for switching to desktop sytiling using js */
+.resultsDesktop{
+  position: inherit;
+  top: 0px; 
+  transition: max-height 0.2s ease-out;
+}
+
+
+#mortgage_calculator{
+
+  width: 300px;
+  height: 431px;
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #000000;
+  padding: 15px 20px 20px 20px;
+
+ 
+/* As flex item */
+  flex-grow: 2 ;
+
+/* As flex container */
+  display: flex;
+  flex-direction: column;
+
+}
+
+#form_mortgage_calc {
+  /* As flex container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#form_mortgage_calc .line-separator{
+  margin: 0px;
+  
+}
+
+
+#mortgage_calculator label.field-label{
+  color: #3e3d3f;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  /* Text style for "Years of m" */
+  letter-spacing: 0.17px;
+ 
+}
+
+#mortgage_calculator .item-row{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 5px 0;
+}
+
+
+#mortgage_calculator div#loanAmountRow{
+  margin: 17px 0px  5px 0px;
+}
+
+
+.slider-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-container label{
+
+  width: 9px;
+  height: 16px;
+  color: #3e3d3f;
+  font-size: 14px;
+  /* Text style for "1" */
+  letter-spacing: 0.28px;
+
+
+  flex-grow: 1;
+ 
+}
+
+.slider-container input[type="range"]{
+  flex-grow: 2;
+  width: 105px;
+  border-radius: 100px;
+}
+
+.slider-container input[type="text"]{
+  text-align: center;
+  width: 50px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #353434;
+  background-color: #000000;
+  color: #eaf6fa;
+
+}
+
+.slider-container input[type="range"] + label {
+  text-align: center;
+}
+
+#loanAmountRow + div.item-row-2column {
+  margin: 18px 0px 0px 0px;
+}
+
+#mortgage_calculator .item-row-2column{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+}
+
+#mortgage_calculator .item-row-2column div{
+  /* As flex container */
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  width: 100%;
+
+}
+
+#mortgage_calculator .item-row-2column + div.item-row{
+  margin: 20px 0px 0px 0px;
+}
+
+#mortgage_calculator span.item-row#instructions{
+  color: #3e3d3f;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.21px;
+  margin: 0px;
+}
+
+
+
+#mortgage_calculator .item-row-2column div.blank-flex-separator{
+  width: 30%;
+}
+
+.item-row-2column span.textbox-normal {
+  display: inline-block;
+  position: relative;
+
+  /* width: 120px; */
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #a6a6a6;
+  background-color: #ffffff;
+
+}
+
+
+.line-separator{
+  height: 2px;
+  background-color: #cbcbcb;
+}
+
+button{
+
+  /* Button */
+  border: 0px;
+  width: 100%;
+  background-color: #0077c0;
+  height: 40px;
+  border-radius: 4px;
+
+  /* Font related */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Text style for "calcul" */
+  letter-spacing: 0.58px;
+}
+
+
+.calc-title{
+  width: 100%;
+  height: 35px;
+  color: #006ea0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  /* Text style for "Mortgage C" */
+  letter-spacing: 0.5px;
+
+}
+
+.main-container .line-separator{
+  margin: 10px 0px 20px 0px;
+}
+
+.textbox-normal:focus{
+  box-shadow: 0 0 4px rgba(62, 61, 63, 0.62);
+  border: 1px solid #3e3d3f;
+}
+
+
+#results .title{
+  color: #3e3d3f;
+  font-size: 20px;
+  line-height: 30px;
+
+}
+
+/* mobile */
+.resultNumber, .dollar{
+  opacity: 0.2;
+  color: #3e3d3f;
+
+  font-size: 14px;
+  font-weight: 700;
+} 
+
+#resultTotalMPayment,  .resultNumberPostCalculation > #grandTotalDollar{
+  color: #3e3d3f;
+  /* opacity: 1; */
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.resultNumberPostCalculation, .resultNumberPostCalculation > span.dollar  {
+  color: #3e3d3f;
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.calculator-content-c{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+
+.item-row span.textbox-normal {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #a6a6a6;
+  background-color: #ffffff;
+
+}
+
+
+
+
+/* Default style for currency input text */
+input.currency-text {
+  border-radius: 4px;
+  border: 1px solid #a6a6a6;
+  background-color: #ffffff;
+
+  width: 95%;
+  /* Padding left because the $ mask */
+  left: 25px;
+  -webkit-appearance: none;
+  border: 0px;
+  outline: none;
+  font-size: 16px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.currency-text:invalid {
+  border: none;
+  box-shadow: none; /*FF*/
+}
+
+
+/* Dollar currency mask element  positioned inside a numeric textbox*/
+span.textbox-normal:before {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     margin: auto;
+     content: "₹";
+     left: 10px;
+     text-align: left;
+ }
+
+
+ #annualTax, #annualInsurance{
+   width: 70%;
+   height: 80%;
+
+ }
+
+ #loanAmount{
+   width: 80%;
+   height: 80%;
+ }
+
+
+
+/* Error message for required fields */
+.fieldIsEmpty{
+  color: #da3535;
+  font-size: 10px;
+  font-weight: 700;
+  /* Text style for "Loan Amoun" */
+  letter-spacing: 0.2px;
+
+}
+
+
+#results .row_result{
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  align-items: center;
+
+  /* Line separator */
+  border-bottom: 2px solid  #cbcbcb;
+
+
+  color: #3e3d3f;
+  font-family: 'SF UI Display', Roboto, sans-serif;
+ 
+  padding: 15px 0px 15px 0px;
+
+}
+
+#results p.line-separator{
+  height: 0px;
+}
+
+#results div.row_result.grand-total-row{
+  border-bottom: 0px ;
+  padding: 20px 0px 0px 0px;
+}
+
+
+#results .row_result label{
+  flex-grow: 1;
+  text-align: left;
+
+  font-size: 12px;
+  font-weight: 400;
+}
+
+#results .row_result div.resultNumber{
+  flex-grow: 1;
+  text-align: right;
+
+  color: #3e3d3f;
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+#grandTotalSeparator{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+
+
+/* Styles for devices with screen size ranging from phone to tablet */
+ @media screen and (min-width:  300px) and (max-width:  799px) { 
+    #mortgage_calculator{
+        width: 100%;
+      }
+} 
+
+
+/* Style for Dekstop screen sizes or large screen devices 
+From 800px  -> bigger. Ideal size 820px
+*/ 
+@media screen and (min-width: 800px )
+{
+  .calculator-content-c{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;  
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+  }
+
+  #results{
+ 
+    height: 440px;
+    background-color: #eaf6fa;
+    padding: 35px 40px 34px 40px;
+    align-self: flex-start;
+    margin: 41px 0px 41px 0px;
+    position: inherit;
+    top: 0px; 
+    z-index: -50;
+    transition: max-height 0.2s ease-out;
+  }
+ 
+  
+  
+  #mortgage_calculator{
+    width: 470px;
+    height: 522px;
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding: 15px 20px 20px 20px;
+  /* As flex container */
+    display: flex;
+    flex-direction: column;
+  }
+
+  #results div.title{
+    font-size: 26px;
+    line-height: 30px;
+    margin: 0px 0px 30px 0px;
+  }
+
+
+  #results .row_result{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: flex-start;
+    /* Line separator */
+    border-bottom: 0px solid  #cbcbcb;
+    color: #3e3d3f;
+    padding: 16px 0px 16px 0px;
+  }
+  
+  #results p.line-separator{
+    height: 1px;
+  }
+  
+  #results div.row_result.grand-total-row{
+    border-bottom: 0px ;
+    padding: 20px 0px 0px 0px;
+  }
+  
+  
+  #results .row_result label{
+    flex-grow: 1;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  
+  #results .row_result div.resultNumber{
+    flex-grow: 1;
+    text-align: right;
+    color: #3e3d3f;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  #results .row_result label{
+    font-size: 18px;
+    line-height: 30px;    
+  }
+
+  .resultNumber, .dollar{
+    opacity: 0.2;
+    color: #3e3d3f;
+    font-size: 18px;
+    font-weight: 700;
+  } 
+  
+  #grandTotalSeparator{
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #grandTotalDollar{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  
+  #resultTotalMPayment,  .resultNumberPostCalculation > #grandTotalDollar{
+    color: #3e3d3f;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  .resultNumberPostCalculation, .resultNumberPostCalculation > span.dollar  {
+    color: #3e3d3f;
+    opacity: 1;
+    
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  #mortgage_calculator span.item-row#instructions{
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+
+  }
+
+  #mortgage_calculator label.field-label{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    /* Text style for "Years of m" */
+    letter-spacing: 0.2px;
+  }
+  
+  .slider-container label{
+    font-size: 16px;
+    letter-spacing: 0.32px;
+  }
+  
+  .slider-container input[type="text"]{
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    width: 60px;
+    height: 45px;
+  }
+
+  .item-row span.textbox-normal, .item-row-2column span.textbox-normal{
+    height: 45px;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+  }
+
+
+  #form_mortgage_calc .line-separator{
+    margin: 10px 0px 35px 0px;
+    
+  }
+  
+  #mortgage_calculator div#loanAmountRow {
+    margin: 20px 0px 20px 0px;
+  } 
+
+
+  #loanAmountRow + div.item-row-2column {
+    margin: 0px 0px 0px 0px;
+  }
+  
+
+}

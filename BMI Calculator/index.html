@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Calculate Your Body Mass Index Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women."/>
+  <link rel="stylesheet" href="style.css">
+  <title>SuperCalculator - BMI Calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+
+  <div class="row">
+    <div class="col-sm-16">
+      <h1 class="centered">BMI CALCULATOR</h1>
+      <div class="row sep">
+        <div class="vaccine">
+          <FORM  NAME="myform">
+            <h2 class="small"><span class="label label-default centered">Enter Your Height and Weight </span></h2>
+            <!-- row 1 weight & height -->
+            <div class="row">
+              <!-- Weight -->
+              <div class="col-xs-6">
+                <div class="input-group">
+                  
+                  <div class="form__group">
+                    <input type="text" class="form__input" Id="number1" placeholder="Weight (In Kg)"  onkeyup="sum()" autocomplete="off" required="" />
+                    <label for="name" class="form__label">Weight (In Kg)</label>
+                  </div>
+                 
+                  
+                </div>
+              </div>
+              <!-- Height -->
+              <div class="col-xs-6">
+                <div class="input-group">
+                
+                 
+               
+
+
+                  <div class="form__group">
+                    <input type="text" class="form__input" ID="number2" placeholder="Height (In cm)"  onkeyup="sum()" autocomplete="off" required="" />
+                    <label for="name" class="form__label">Height (In cm)</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- row 2 BMI  -->
+            <div class="row">
+              <div class="col-sm-16">
+                <!-- BMI Result -->
+                <div class="input-group">
+                 
+                  <div class="form__group">
+                    <input type="text" class="form__input" id="result" name="result" placeholder="Your BMI is"  onkeyup="sum()" autocomplete="off" required="" disabled="disabled" />
+                    <label for="name" class="form__label">Your BMI is</label>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </FORM>
+        </div>
+        <div class="covid">
+          <h1 class="small"><span class="label label-default centered">Convert Pound and feet' inches" </span></h1>
+          <FORM NAME="cform">
+            <div class="row">
+              <!-- feet -->
+              <div class="col-xs-6 col-md-4">
+                <div class="input-group">
+                  <div class="form__group">
+                    <input type="text" class="form__input" Id="number1" NAME="feet" class="form-control" placeholder="Feet"  onkeyup="convert()" autocomplete="off" required="" />
+                    <label for="name" class="form__label">Feet</label>
+                  </div>
+                  
+                </div>
+              </div>
+              <!-- inches -->
+              <div class="col-xs-6 col-md-4">
+                <div class="input-group">
+                  <div class="form__group">
+                    <input type="text" class="form__input" NAME="inches" class="form-control" placeholder="Inches"  onkeyup="convert()" autocomplete="off" required="" />
+                    <label for="name" class="form__label">Inches</label>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <!-- centimeter -->
+              <div class="col-xs-6 col-md-4">
+                
+                <div class="input-group">
+                  <div class="form__group">
+                    
+                    <input type="text" class="form__input" id="cm" class="form-control" placeholder="Cm" autocomplete="off" required="" />
+                    <label for="name" class="form__label">Cm</label>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Pound -->
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <input type="text" class="form__input"  NAME="pound" class="form-control" placeholder="Pound"  onkeyup="pkconvert()" autocomplete="off" required="" />
+                    <label for="name" class="form__label">Pound</label>
+                  
+                </div>
+              </div>
+              <!-- Kilogram -->
+              <div class="col-xs-6">
+                <div class="input-group">
+                  <input type="text" class="form__input"  ID="kg" class="form-control" placeholder= "Kilogram"  onkeyup="pkconvert()" autocomplete="off" required="" />
+                    <label for="name" class="form__label">Kilogram</label>
+                </div>
+              </div>
+            </div>
+        </div>
+        </FORM>
+      </div><!-- End of row 1 -->
+      <div class="row">
+        <div class="col-xs-8 col-sm-6" style="width: 100%; background-color: rgb(233, 236, 199);">
+          <h1><span class="label label-default centered">BMI Level Indicator </span></h1>
+          <div class="panBMI Level Indicatorel panel-default chair">
+            <table class="table chair">
+              <tr>
+                <th>Category</th>
+                <th>From</th>
+                <th>To</th>
+              </tr>
+
+              <tr>
+                <td>Very severely underweight</td>
+                <td>-</td>
+                <td>15.0</td>
+              </tr>
+
+              <tr>
+                <td>Severely underweight</td>
+                <td>15</td>
+                <td>16</td>
+              </tr>
+
+              <tr class="bg-primary">
+                <td>Underweight</td>
+                <td>16</td>
+                <td>18.5</td>
+              </tr>
+
+              <tr class="bg-success">
+                <td>Normal (healthy weight)</td>
+                <td>18.5</td>
+                <td>25</td>
+              </tr>
+
+              <tr class="table-active">
+                <td>Overweight</td>
+                <td>25</td>
+                <td>30</td>
+              </tr>
+
+              <tr class="bg-info">
+                <td>Obese Class I (Moderately obese)</td>
+                <td>30</td>
+                <td>35</td>
+              </tr>
+
+              <tr class="bg-warning">
+                <td>
+                  Obese Class II (Severely obese)</td>
+                <td>35</td>
+                <td>40</td>
+              </tr>
+
+              <tr class="bg-danger">
+                <td>Obese Class III (Very severely obese)</td>
+                <td>40</td>
+                <td>-</td>
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 col-sm-6">
+        <div style="background-color: bisque; width: 96%; margin: 0 auto;" > <br>
+        <h1><span class="label label-default centered">Percentage of Body fat</span></h1>
+        <FORM NAME="fform">
+          <!-- age -->
+          <div class="row">
+            <div class="col-sm-16 class">
+              <div class="input-group class">
+                <input type="text" class="form__input" id="basic-addon1"  onkeyup="check()" name="age"class="form-control" placeholder="AGE" autocomplete="off" required="" />
+                    <label for="name" class="form__label" style="font-weight: bold; text-align: center; margin-top: 10px;">AGE</label>
+               
+              </div>
+            </div>
+          </div>
+          <!-- Gender -->
+          <div class="row">
+            <fieldset class="form-group center">
+              <div class=""><b class="size">Gender</b></div>
+              <div class="">
+                <div class="form-check">
+                  <label class="form-check-label container">
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="male" onkeyup="check()"
+                      value="option1" checked> Male <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="">
+                <div class="form-check">
+                  <label class="form-check-label container">
+                    <input type="radio" class="form-check-input" name="optionsRadios" onkeyup="check()" id="female"
+                      value="option2">Female<span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            
+          </div>
+          
+          <!-- BMI -->
+          <div class="row center1">
+            <div class="col-sm-16">
+              <div class="input-group">
+                <input type="text" class="form__input" id="basic-addon1"  onkeyup="check()" name="bmi" class="form-control" placeholder="BMI" autocomplete="off" required="" />
+                <label for="name" class="form__label" style="text-align: center; font-weight: bold; margin-top: 10px;">BMI</label>
+               
+              </div>
+            </div>
+          </div>
+          <!-- Fat % -->
+          <div class="row center1">
+            <div class="col-sm-16">
+              <div class="input-group">
+            
+                <input type="text" class="form__input" class="form-control" id="fat" aria-describedby="basic-addon1" placeholder="Your Fat % is " autocomplete="off" required="" disabled="disabled"/>
+                <label for="name" class="form__label" style="text-align: center; font-weight: bold; margin-top: 10px;">Your Fat % is</label>
+              </div>
+            </div>
+          </div>
+        </FORM>
+        </div>
+      </div>
+      
+    </div><!-- End of col -sm -16 -->
+  </div><!-- End of row -->
+
+  <script src="main.js"></script>
+  <h5 style="text-align: center; color: white;">Copyright &#169; 2020 Yasin Ansari<br/>
+
+    <script language="JavaScript" type="text/javascript">
+    document.write("Last Modified:  " + document.lastModified);
+    </script></h5>
+</body>
+
+</html>

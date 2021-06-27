@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="style.css">
+<script>
+addToHomescreen();
+</script>
+  <title>SuperCalculator - Cryptorate Tracker</title>
+
+</head>
+
+<body>
+
+<h2>Crypto Rate Converter</h2>
+
+
+<!-- TradingView Widget BEGIN -->
+<div class="ticker-container">
+<div class="ticker-canvas">
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js">
+  {
+  "symbols" : [
+    
+    {
+      "title": "TATA MOTORS",
+      "proName": "BSE:TATAMOTORS"
+    },
+    {
+      "title": "TATA STEEL",
+      "proName": "BSE:TATASTEEL"
+    },
+    {
+      "title": "TCS",
+      "proName": "BSE:TCS"
+    },
+    {
+      "description": "WIPRO",
+      "proName": "BSE:WIPRO"
+    },
+    {
+      "description": "HCL",
+      "proName": "BSE:HCLTECH"
+    },
+    {
+      "description": "INFOSYS",
+      "proName": "BSE:INFY"
+    },
+    {
+      "description": "ADANI PORTS",
+      "proName": "BSE:ADANIPORTS"
+    },
+    {
+      "description": "RELIANCE INDS",
+      "proName": "BSE:RELIANCE"
+    },
+    {
+      "description": "AIRTEL",
+      "proName": "BSE:BHARTIARTL"
+    },
+    {
+      "description": "VODAFONE IDEA",
+      "proName": "BSE:IDEA"
+    },
+    {
+      "description": "HDFC BANK",
+      "proName": "BSE:HDFCBANK"
+    },
+    {
+      "description": "State Bank",
+      "proName": "BSE:SBIN"
+    },
+    {
+      "description": "AXIS BANK",
+      "proName": "BSE:AXISBANK"
+    },
+    {
+      "description": "KOTAK MAHINDRA BANK",
+      "proName": "BSE:KOTAKBANK"
+    },
+    {
+      "description": "BAJAJ FINANCE LTD",
+      "proName": "BSE:BAJFINANCE"
+    },
+    
+    {
+      "description": "HINDUSTAN UNILEVER",
+      "proName": "BSE:HINDUNILVR"
+    },
+    {
+      "description": "ITC LTD",
+      "proName": "BSE:ITC"
+    },
+    {
+      "description": "TITAN",
+      "proName": "BSE:TITAN"
+    },
+    {
+      "description": "SUN PHARMACEUTICAL",
+      "proName": "BSE:SUNPHARMA"
+    },
+    {
+      "description": "DR REDDYS LABS",
+      "proName": "BSE:DRREDDY"
+    },
+    {
+      "description": "NESTLE",
+      "proName": "BSE:NESTLEIND"
+    },
+    {
+      "description": "LARSEN & TOUBRO",
+      "proName": "BSE:LT"
+    },
+    {
+      "description": "HERO MOTOCORP",
+      "proName": "BSE:HEROMOTOCO"
+    },
+    {
+      "description": "MARUTI SUZUKI",
+      "proName": "BSE:MARUTI"
+    },
+    {
+      "description": "MAHINDRA",
+      "proName": "BSE:MAHMF"
+    }
+  ],
+  "locale": "en"
+}
+  </script>
+</div>
+</div>
+</div>
+<!-- TradingView Widget END -->
+<div class="content">
+  
+</div>
+
+  <div class="m-3 columns is-multiline" id="main">
+    <crypto-converter-widget shadow symbol live background-color="#383a59" class="columns" border-radius="0.60rem" fiat="indian-rupee" crypto="yearn-finance" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#008080" border-radius="0.60rem" fiat="indian-rupee" crypto="bitcoin" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#87A3A3" border-radius="0.60rem" fiat="indian-rupee" crypto="ethereum" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#6897bb" border-radius="0.60rem" fiat="indian-rupee" crypto="xrp" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#008080" border-radius="0.60rem" fiat="indian-rupee" crypto="tether" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#FF7F50" border-radius="0.60rem" fiat="indian-rupee" crypto="yearn-finance-ii" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#DFFF00" border-radius="0.60rem" fiat="indian-rupee" crypto="polkadot" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#D4CDC3" border-radius="0.60rem" fiat="indian-rupee" crypto="cardano" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#5568E5" border-radius="0.60rem" fiat="indian-rupee" crypto="binance-coin" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#6D51A5" border-radius="0.60rem" fiat="indian-rupee" crypto="litecoin" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#F97D5B" border-radius="0.60rem" fiat="indian-rupee" crypto="dogecoin" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#D9CF79" border-radius="0.60rem" fiat="indian-rupee" crypto="chainlink" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#A4E9F9" border-radius="0.60rem" fiat="indian-rupee" crypto="bitcoin-cash" amount="1" decimal-places="2"></crypto-converter-widget>
+    <crypto-converter-widget shadow symbol live background-color="#8338E3" border-radius="0.60rem" fiat="indian-rupee" crypto="tron" amount="1" decimal-places="2"></crypto-converter-widget>
+ 
+ 
+ 
+ 
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget/dist/latest.min.js" async></script>
+  
+ 
+
+ 
+  </h5>
+</body>
+
+</html>

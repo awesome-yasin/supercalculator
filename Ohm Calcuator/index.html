@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+ <link rel="manifest" href="manifest.json">
+ <meta name="msapplication-TileColor" content="#ffffff">
+ <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+ <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+  <title>SuperCalculator - Ohm Law Calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <script src="main.js"></script>
+</head>
+<body>
+  
+
+
+    <h1 style="text-align: center; color: white;">Ohm's Law Calculators</h1></br>
+
+   <table border="2" bordercolor="blue" height="200" width="1000">
+<!-- New row. -->
+   <tr><th>Calculate Voltage
+   </th><th>Calculate Current</th></tr>
+<!-- New row. -->
+   <tr><td>
+      <form name="emf" action="">
+         <br/> enter the current:
+         <input type="text" name="aa" size="15">
+         <br/>
+          enter the resistance:
+         <input type="text" name="rr" size="15">
+         <br/>
+
+         <input type="button" class="btn btn-bubble" value="GET VOLTS" onclick="gir(this.form)"><br/>
+
+         The Circuit Voltage:
+         <input type="text" name="vv" size="15" ><br/>
+         The Circuit Power:
+         <input type="text" name="ww" size="15" >
+      </form>
+   </td><td>
+
+      <form name="amp" action="">
+         <br/> enter the voltage:
+         <input type="text" name="vv" size="15"><br/>
+          enter the resistance:
+         <input type="text" name="rr" size="15"><br/>
+
+         <input type="button" class="btn btn-bubble" value="GET AMPS" onclick="ger(this.form)"><br/>
+
+         The Circuit Current:
+         <input type="text" name="aa" size="15" ><br/>
+         The Circuit Power:
+         <input type="text" name="ww" size="15" >
+      </form>
+   </td></tr>
+</table><br/><br/>
+
+   <table border="2" bordercolor="blue" height="200" width="1000">
+   <tr><th>Calculate Current
+   </th><th>Calculate Power</th></tr>
+   <tr><td>
+      <form name="ohm" action="">
+         <br/> enter the Voltage:
+         <input type="text" name="vv" size="15">
+         <br/>
+          enter the Current:
+         <input type="text" name="aa" size="15">
+         <br/>
+
+         <input type="button" class="btn btn-bubble" value="GET OHMS" onclick="gei(this.form)"><br/>
+
+         The Circuit Resistance:
+         <input type="text" name="rr" size="15" ><br/>
+         The Circuit Power:
+         <input type="text" name="ww" size="15" >
+      </form>
+   </td><td>
+
+      <form name="watt" action="">
+         <br/> enter the Voltage:
+         <input type="text" name="vv" size="15"><br/>
+          enter the Current:
+         <input type="text" name="aa" size="15"><br/>
+
+         <input type="button" class="btn btn-bubble" value="GET WATTS" onclick="gpwr(this.form)"><br/>
+
+         The Circuit Power:
+         <input type="text" name="ww" size="15" ><br/>
+
+      </form>
+   </td></tr>
+
+   </table>
+<!-- Tables end here -->
+
+      <h5 style="text-align: center;">Copyright &#169; 2020 Yasin Ansari<br/>
+
+      <script language="JavaScript" type="text/javascript">
+      document.write("Last Modified:  " + document.lastModified);
+      </script></h5>
+   
+
+</body>
+
+</html>

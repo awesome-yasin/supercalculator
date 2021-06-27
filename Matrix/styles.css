@@ -1,0 +1,40 @@
+body {
+	font-family: sans-serif;
+	 background-image: linear-gradient(to top, #209cff 100%, #68e0cf 200%);
+	 color: white;
+  }
+  form{
+	width: 400px;
+  }
+  input{
+	margin: 5px;
+	width: 70px;
+	height: 20px;
+	outline: thick;
+	border: none;
+  }
+  .fucking{
+	  width: 400px;
+  }
+  .fucking-main{
+	width:100%;
+
+  }
+  .fucking-child{
+	left:30%;
+margin-left: 40px;
+margin-top: 50px;
+width:200px;
+
+  }
+.fucking-button{
+	width: 100px;
+	height: 30px;
+	
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+.fucking-button:hover {
+	background-color: #bbc7bc;
+  }

@@ -1,0 +1,288 @@
+
+
+body {
+
+	background-image: linear-gradient(to top, #209cff 100%, #68e0cf 200%);
+	color: aliceblue;
+}
+#first{
+	text-align: center;
+	margin-top: 2em;
+}
+#yasin{
+	margin-left: 20%;}
+  .group 			  { 
+	position:relative; 
+	margin-bottom:45px; 
+  }
+  .ip{
+	background-image: linear-gradient(to top, #209cff 100%, #68e0cf 200%);
+	font-size:18px;
+	
+	padding:10px 10px 10px 5px;
+	display:block;
+	width: 60%;
+	border:none;
+
+	border-bottom:1px solid #757575;
+  }
+  input 				{
+	
+  }
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  .label{
+	color:rgb(255, 251, 251) !important; 
+	font-size:22px !important;
+	font-weight:normal;
+	
+	position:absolute;
+	pointer-events:none;
+	left:5px;
+	top: -30px !important;
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+ 
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:60%; }
+  .bar:before, .bar:after 	{
+	content:'';
+	height:2px; 
+	width:0;
+	bottom:1px; 
+	position:absolute;
+	background:rgb(48, 90, 70); 
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+  }
+  .bar:before {
+	left:50%;
+  }
+  .bar:after {
+	right:50%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+	position:absolute;
+	height:60%; 
+	width:100px; 
+	top:25%; 
+	left:0;
+	pointer-events:none;
+	opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+	-webkit-animation:inputHighlighter 0.3s ease;
+	-moz-animation:inputHighlighter 0.3s ease;
+	animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+	  from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+	  from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+	  from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
+  }
+
+
+  .selectdiv {
+	position: relative;
+	/*Don't really need this just for demo styling*/
+	
+	float: left;
+	min-width: 200px;
+
+  }
+  
+  /* IE11 hide native button (thanks Matt!) */
+  select::-ms-expand {
+  display: none;
+  }
+  
+  .selectdiv:after {
+	content: '<>';
+	font: 17px "Consolas", monospace;
+	color: #333;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	right: 11px;
+	/*Adjust for position however you want*/
+	
+	top: 18px;
+	padding: 0 0 2px;
+	border-bottom: 1px solid #999;
+	/*left line */
+	
+	position: absolute;
+	pointer-events: none;
+  }
+  
+  .selectdiv select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	/* Add some styling */
+	outline: none;
+	border: 0;
+	display: block;
+	width: 100%;
+	max-width: 320px;
+	height: 50px;
+	float: right;
+	
+	font-size: 16px;
+
+	color: #333;
+	background-color: #ffffff;
+	background-image: none;
+	border: 1px solid #cccccc;
+	-ms-word-break: normal;
+	word-break: normal;
+  }
+
+  .btn-bubble {
+	color: white;
+	background-color: #77b11c;
+	background-repeat: no-repeat;
+  }
+  .btn-bubble:hover, .btn-bubble:focus {
+	-webkit-animation: bubbles 1s forwards ease-out;
+			animation: bubbles 1s forwards ease-out;
+	background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 39% 93% / 1.17em 1.17em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 26% 108% / 1.05em 1.05em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 88% 118% / 1.19em 1.19em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 46% 108% / 1.1em 1.1em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 12% 126% / 0.52em 0.52em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 9% 138% / 0.62em 0.62em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 29% 123% / 0.91em 0.91em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 26% 114% / 0.83em 0.83em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 32% 133% / 1.2em 1.2em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 101% 95% / 0.89em 0.89em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 90% 98% / 1.13em 1.13em;
+	background-color: #77b11c;
+	background-repeat: no-repeat;
+  }
+  
+  @-webkit-keyframes bubbles {
+	100% {
+	  background-position: 38% -21%, 20% 12%, 83% -356%, 42% -362%, 15% -232%, 11% 5%, 28% -377%, 28% -37%, 38% -325%, 95% -262%, 94% -166%;
+	  box-shadow: inset 0 -6.5em 0 #0072c4;
+	}
+  }
+  
+  @keyframes bubbles {
+	100% {
+	  background-position: 38% -21%, 20% 12%, 83% -356%, 42% -362%, 15% -232%, 11% 5%, 28% -377%, 28% -37%, 38% -325%, 95% -262%, 94% -166%;
+	  box-shadow: inset 0 -6.5em 0 #0072c4;
+	}
+  }
+
+  .btn {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.7em 2.4em;
+	outline: none;
+	border: none;
+	margin-bottom: 3em;
+	font-size: 15px;
+	font-weight: 500;
+  }
+
+
+  table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: rgb(20, 144, 148); 
+	}
+
+th { 
+	background: #3498db; 
+	color: white; 
+	font-weight: bold; 
+	}
+
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+	font-size: 18px;
+	}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
+
+#Result{
+	font-weight: bold;
+	
+	font-size: 26px;
+	
+}

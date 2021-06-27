@@ -1,0 +1,93 @@
+
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>SuperCalculator - EMI Calculator</title>		
+	<link rel="stylesheet" href="styles.css">	
+	</head>
+	<body>
+		<h1 id="first">Loan Calculator</h1>
+				<br><br><br><br><br>
+		<form id="yasin">
+			
+
+      
+      <div class="group">      
+        <input type="text" id="principal" class="ip" />
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label class="label" for="principal"><b>Principal:</b></label>
+      </div>
+
+				
+			
+        <br />
+        
+        <div class="group">      
+          <input type="text" id="interest" class="ip" />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label class="label" for="interest"><b>Interest:</b></label>
+        </div>
+
+			
+				
+        <br />
+
+        <div class="selectdiv">
+          <label for="terms">
+            <select id="terms">
+              <option value="12">12 Months</option>
+              <option value="24">24 Months</option>
+              <option value="36">36 Months</option>
+              <option value="48">48 Months</option>
+              <option value="60">60 Months</option>
+                <option value="72">72 Months</option>
+            </select>
+          </label>
+        </div>
+
+
+
+    
+
+
+			
+			
+				<br /><br><br><br><br><br>
+				<input type="button" class="btn-bubble btn" value="Calculate" onclick="getValues()" />								
+		
+		</form>
+		<form>
+			<fieldset>
+			<legend style="margin-bottom: 50px;">Outputs</legend>
+				<div id="Result"></div>
+			</fieldset>						
+    </form>	
+    <script src="scripts.js"></script>	
+    <h5 style="text-align: center; color: white;">Copyright &#169; 2020 Yasin Ansari<br/>
+
+      <script language="JavaScript" type="text/javascript">
+      document.write("Last Modified:  " + document.lastModified);
+      </script></h5>
+	</body>
+</html>

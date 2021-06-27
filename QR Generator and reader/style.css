@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
+/* width */
+::-webkit-scrollbar {
+  
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #209cff 100%, #68e0cf 200%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+.container {
+  
+ 
+  text-align: center;
+  margin: 40px;
+  width: 400px;
+  height: 600px;
+  padding: 10px 25px;
+  background: linear-gradient(-45deg, #ad8e01, #8ffb01);;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+  font-family: "Montserrat";
+  overflow: scroll;
+  overflow-x: hidden;
+}
+h2{
+  text-align: center;
+}
+.out-qr-show{
+  /* Position */
+  
+ 
+  margin: 0 auto;
+  text-align: left;
+  /* Style QR Code */
+  margin-bottom: 3em;
+  background-color:#FFF;
+  box-shadow:6px 6px 24px rgba(0,0,0,0.1);
+  border-radius:5px;
+ width: 150px;
+ height: 150px;
+}
+.input-qr{
+  /* input position */
+  
+  margin: 0 auto;
+  text-align: left;
+  /* input style */
+  box-shadow:6px 6px 24px rgba(0,0,0,0.1);
+  border: none;
+  margin-top: 3em;
+  margin-bottom: 4em;
+  padding: 15px 10px;
+  text-align:center;
+  transition:0.3s;
+  width:200px;
+  outline: none;
+  border: 0;
+}
+
+#scanned-result{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2em;
+}
+#__getDashboardSectionId{
+  color: aquamarine;
+  text-decoration: none;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    display: block;
+  }
+}

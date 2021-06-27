@@ -1,0 +1,352 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+body {
+
+  font-family: 'Droid Sans Mono', sans-serif;
+  background-color: #0093E9;
+}
+
+.wrapper {
+  width: 750px;
+  height: 560px;
+  min-height: 100vh; 
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+.content{
+  position: relative;
+  width: 750px;
+  height: 560px;
+  
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+.content::after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.content .fucking{
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 100px;
+}
+.fucking-2{
+  border-bottom: 1px solid rgb(89, 131, 114);
+  text-align: center;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.human, .machine {
+  float: left;
+  width: 50%;
+  line-height: 1.5;
+  overflow: scroll;
+}
+.human .io, .machine .io {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 10px 70px 20px;
+  height: 550px;
+  display: block;
+  outline: none;
+  overflow-y: scroll;
+  margin: 0 10px;
+ 
+}
+.human .io::-webkit-scrollbar, .machine .io::-webkit-scrollbar {
+  width: 5px;
+}
+.human .io::-webkit-scrollbar-thumb, .machine .io::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+}
+.human:after, .machine:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.human {
+  background-color: #fff;
+  color: #16161D;
+  font-size: 16px;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.machine {
+  background-color: #1a1a1a;
+  color: #00FF99;
+  border-radius: 0 3px 3px 0;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.7), 0 0 10px rgba(0, 255, 153, 0.5);
+}
+
+.machine .io {
+  font-size: 11px;
+}
+
+
+
+
+
+
+
+.calculator {
+  width: 700px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+	 background-color: #F5F5F5;
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.6);
+  
+  
+  margin: 0 auto;
+}
+.covid{
+  text-align: center;
+  border-bottom: 1px solid #16161D;
+}
+.choose{
+  font-size: 16px !important;
+  letter-spacing: 0px;
+}
+
+.choose p{
+  font-size: 20px;
+}
+
+.input {
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  height: 50px;
+  width: 430px;
+  margin: 5px;
+  font-size: 16px;
+  outline: none;
+  overflow-x: auto;
+  transition: all .2s ease-in-out;
+}
+
+.input:hover {
+  border: 1px solid #bbb;
+  -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button input {
+  display: inline-block;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  height: 60px;
+  width: 47.9%;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 4px 10px 0;
+  cursor: pointer;
+  background-color: #EEEEEE;
+  transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
+}
+
+.button input:hover {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  border-color: #bbb;
+}
+
+.button input:active {
+  font-weight: bold;
+}
+
+.ans{
+	padding: 6px;
+  word-wrap: break-word;
+  width: 100%;
+  height: 60px;
+  background-color: #16161D;
+  color: #00FF99;
+  margin-top: 20px;
+}
+
+form{
+  display: flex;
+  order: 6;
+}
+
+label {
+  
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.375em;
+  
+}
+label input {
+  position: absolute;
+  left: -9999px;
+}
+label input:checked + span {
+  background-color: #d6d6e5;
+}
+label input:checked + span:before {
+  box-shadow: inset 0 0 0 0.4375em #00005c;
+}
+label span {
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  transition: 0.25s ease;
+}
+label span:hover {
+  background-color: #d6d6e5;
+}
+label span:before {
+  display: flex;
+  flex-shrink: 0;
+  content: "";
+  background-color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+  transition: 0.25s ease;
+  box-shadow: inset 0 0 0 0.125em #00005c;
+}
+
+
+
+
+
+
+
+.output {
+  overflow: scroll;
+
+  margin-bottom: 1em !important;
+  font-size: 1rem;
+  color: #00FF99;
+  width: 100%;
+  height: 40px;
+  background-color: #16161D;
+  
+}
+.section input{
+
+ outline: none;
+}
+.output::-webkit-scrollbar {
+  width: 1px !important;
+}
+
+
+/* Handle */
+.output::-webkit-scrollbar-thumb {
+  background: #00FF99;
+}
+
+/* Handle on hover */
+.output::-webkit-scrollbar-thumb:hover {
+  background: rgb(125, 179, 155);
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+.title{
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+  }
+
+  h1, h2 {
+      font-size: 1.1rem;
+  }
+}
+
+.btn {
+  padding: 10px 5px;
+  font-size: 1rem;
+  background: rgb(50, 101, 196);
+  color: rgba(255, 255, 255, 0.726);
+  outline: none;
+  border: none;
+  margin: .4em 0;
+  width: 100%;
+  transition: background-color .2s ease-in-out;
+}
+
+.btn:last-child {
+  background: rgb(39, 66, 155);
+}
+
+.btn:hover {
+  background: rgb(139, 156, 214); 
+  color: rgba(0, 0, 0, 0.788);
+}
+.btns {
+  display: flex;
+  width: 100%;
+}
+
+.selectable{
+  -webkit-touch-callout: all; /* iOS Safari */
+  -webkit-user-select: all; /* Safari */
+  -khtml-user-select: all; /* Konqueror HTML */
+  -moz-user-select: all; /* Firefox */
+  -ms-user-select: all; /* Internet Explorer/Edge */
+  user-select: all; /* Chrome and Opera */
+
+}
+@media only screen and (max-width: 600px) {
+ 
+  .calculator{
+    width: 90%;
+    height: auto;
+  }
+  .choose p{
+    font-size: 16px;
+  }
+  form span{
+    font-size: 12px;
+  }
+  .human , .machine{
+    height: 400px;
+  }
+}

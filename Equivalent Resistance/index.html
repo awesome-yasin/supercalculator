@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="style.css">
+<title>SuperCalculator - Equivalent Resistance Calculator</title>
+<body>
+
+  <div class="container">
+
+    <form>
+
+
+      <p style="font-weight:bolder">A series-parallel calculator for resistors</p>
+      <br />
+      <font size="-1">Set number of decimal places:</font>
+      <input type="text" value="2" size="2" onChange="N=this.value; ">
+
+      <p>
+        Input:
+
+        <input type="text" class="input" size="70" value="s(9,12,3,p(4,4))" name="inFld" onFocus="clearOutput(this.form);">
+
+        <br />
+        <input type="button" class="btn btn-bubble" value="Evaluate" onClick="evaluateX(this.form)">
+<br>
+        Output:
+        <input type="text" name="outFld" size="20" onFocus="blur();">
+    </form>
+<div class="extra">
+  <h2 style="font-weight: bold;">How to Use?</h2>
+  <div class="series">
+    <h4>To calculate only series connection</h4>
+    <p>If you want to calculate Equivalent Resistance in Series then only write "s" with brackets and write different resistor values seprated by comma.</p>
+    <p>For Example</p>
+    <img src="series.jpg" alt="" srcset="">
+    <p>To calculate equivalent resistance in series write equation as follows</p>
+    <p style="width: 90px; height: 30px; background-color: aliceblue; text-align: center; margin: 15px auto; font-weight: bold; ">s(3,10,5)</p>
+  </div>
+  <div class="parallel">
+    <h4>To calculate only Parallel connection</h4>
+    <p>If you want to calculate Equivalent Resistance in Parallel then only write "p" with brackets and write different resistor values seprated by comma.</p>
+    <p>For Example</p>
+    <img src="parallel.png" alt="" srcset="">
+    <p>To calculate equivalent resistance in parallel write equation as follows</p>
+    <p style="width: 140px; height: 30px; background-color: aliceblue; text-align: center; margin: 15px auto; font-weight: bold;">p(50,100,500)</p>
+  </div>
+  <div class="sp">
+    <h4>To calculate Series and Parallel connections combined</h4>
+    <p>If you want to calculate Equivalent Resistance in Series and Parallel then write "s" for series and "p" for parallel with brackets and write different resistor values seprated by comma.</p>
+    <p>For Example</p>
+    <img src="sp.png" alt="" srcset="" style="width: 350px; height: 200px;">
+    <p>To calculate equivalent resistance in Series and parallel write equation as follows</p>
+    <p style="width: 190px; height: 30px; background-color: aliceblue; text-align: center; margin: 15px auto; font-weight: bold;">s(110,p(220,180))</p>
+  </div>
+  <h3>
+    Making a PI with one-ohm resistors
+  </h3>
+  <img src="pi.jpg" alt="" srcset="">
+  <p>To calculate equivalent resistance</p>
+  <p style="width: 590px; height: 30px; background-color: aliceblue; text-align: center; margin: 15px auto; font-weight: bold;">s(p(s(1,p(1,1)),s(1,1,1,1,p(1,s(1,1,1,p(1,1))))),1,1)</p>
+</div>
+
+  </div>
+  <h5 style="text-align: center; color: white;">Copyright &#169; 2020 Yasin Ansari<br/>
+
+    <script language="JavaScript" type="text/javascript">
+    document.write("Last Modified:  " + document.lastModified);
+    </script></h5>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

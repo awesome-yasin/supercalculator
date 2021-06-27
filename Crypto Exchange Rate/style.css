@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+body {
+
+  font-family: 'Droid Sans Mono', sans-serif;
+  background: rgba(19, 126, 214, 0.9); 
+}
+
+.columns{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-gap: 32px;
+  grid-auto-flow: dense;
+}
+
+
+
+h2 {
+  text-align: center;
+  
+  
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 5px;
+ 
+  text-shadow: -1px -1px 0px #2196f3, 3px 3px 0px #2196f3, 6px 6px 0px #0d47a1;
+}
+body {
+  margin: 0;
+}
+.content {
+  padding: 10px 20px;
+}
+.content p {
+  font-family: sans-serif;
+}
+
+/******/
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-canvas {
+  width: calc((200px * 15) + 2px);
+  /* 
+  200px = minimum width of ticker item before widget script starts removing ticker codes
+  15 = number of ticker codes
+  2px = accounts for 1px external border
+  */
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker-canvas;
+  animation-name: ticker-canvas;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+.ticker-canvas:hover {
+  animation-play-state: paused
+}
+
+@-webkit-keyframes ticker-canvas {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker-canvas {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.tradingview-widget-container {
+  position: relative;
+}
+.tradingview-widget-container iframe {
+    position: absolute;
+    top: 0;
+}
+.tradingview-widget-container iframe:nth-of-type(2) {
+  left: 100%;
+}
