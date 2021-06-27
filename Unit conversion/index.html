@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+  <title>SuperCalculator - Unit Converter</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:700" rel="stylesheet">
+</head>
+
+<body>
+  
+
+  <div class="converter-wrapper">
+    <h1> UNIT CONVERTER</h1>
+  
+    <form name="property_form">
+      <span>
+        <select class="select-property" name="the_menu" size=1 onChange="UpdateUnitMenu(this, document.form_A.unit_menu); UpdateUnitMenu(this, document.form_B.unit_menu)">
+        </select>
+      </span>
+    </form>
+  
+    <div class="converter-side-a">
+      <form name="form_A" onSubmit="return false">
+        <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0" onClick="this.select();" onKeyUp="CalculateUnit(document.form_A, document.form_B)">
+        <span>
+          <select name="unit_menu" onChange="CalculateUnit(document.form_B, document.form_A)">
+          </select>
+        </span>
+      </form>
+    </div> <!-- /converter-side-a -->
+    
+   <div class="converter-equals">
+     <p>=</p>
+   </div> <!-- /converter-side-a -->
+  
+    <div class="converter-side-b">
+      <form name="form_B" onSubmit="return false">
+        <input type="text" class="numbersonly" name="unit_input" maxlength="20" value="0" onClick="this.select();" onkeyup="CalculateUnit(document.form_B, document.form_A)">
+        <span>
+          <select name="unit_menu" onChange="CalculateUnit(document.form_A, document.form_B)">
+          </select>
+        </span>
+      </form>
+    </div> <!-- /converter-side-b -->
+  </div><!-- /converter-wrapper -->
+ 
+ 
+
+  <script src="main.js"></script>
+</body>
+
+</html>

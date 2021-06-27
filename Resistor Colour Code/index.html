@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+  <title>SuperCalculator - Resistor Colour Code</title>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+  <h2>Resistor color code calculator </h2>
+  <div class="container">
+    <select name="" id="firstColumn">
+  <option value="0" id="black">Black</option>
+  <option value="10" id="brown">Brown</option>
+  <option value="20" id="red">Red</option>
+  <option value="30" id="orange">Orange</option>
+  <option value="40" id="yellow">Yellow</option>
+  <option value="50" id="green">Green</option>
+  <option value="60" id="blue">Blue</option>
+  <option value="70" id="violet">Violet</option>
+  <option value="80" id="grey">Grey</option>
+  <option value="90" id="white">White</option>
+  <option value="0" id="gold">Gold</option>
+  <option value="0" id="silver">Silver</option>
+</select>
+
+    <select name=""  id="secondColumn">
+  <option value="0" id="black">Black</option>
+  <option value="1" id="brown">Brown</option>
+  <option value="2" id="red">Red</option>
+  <option value="3" id="orange">Orange</option>
+  <option value="4" id="yellow">Yellow</option>
+  <option value="5" id="green">Green</option>
+  <option value="6" id="blue">Blue</option>
+  <option value="7" id="violet">Violet</option>
+  <option value="8" id="grey">Grey</option>
+  <option value="9" id="white">White</option>
+  <option value="0" id="gold">Gold</option>
+  <option value="0" id="silver">Silver</option>
+</select>
+
+    <select name=""  id="thirdColumn">
+  <option value="1" id="black">Black</option>
+  <option value="10" id="brown">Brown</option>
+  <option value="100" id="red">Red</option>
+  <option value="1000" id="orange">Orange</option>
+  <option value="10000" id="yellow">Yellow</option>
+  <option value="100000" id="green">Green</option>
+  <option value="1000000" id="blue">Blue</option>
+  <option value="10000000" id="violet">Violet</option>
+  <option value="0" id="grey">Grey</option>
+  <option value="0" id="white">White</option>
+  <option value="0.1" id="gold">Gold</option>
+  <option value="1.01" id="silver">Silver</option>
+</select>
+
+    <select name="" id="fourthColumn">
+  <option value="0" id="black">Black</option>
+  <option value="1" id="brown">Brown</option>
+  <option value="2" id="red">Red</option>
+  <option value="0" id="orange">Orange</option>
+  <option value="0" id="yellow">Yellow</option>
+  <option value="5" id="green">Green</option>
+  <option value="0.25" id="blue">Blue</option>
+  <option value="0.1" id="violet">Violet</option>
+  <option value="0.05" id="grey">Grey</option>
+  <option value="0" id="white">White</option>
+  <option value="5" id="gold">Gold</option>
+  <option value="10" id="silver">Silver</option>
+</select>
+  </div>
+
+  <h3 id="result"></h3>
+
+  <div id="resistor" onclick="bzz()" class="resistor">
+    <div class="wire"></div>
+    <div class="body"></div>
+    <div class="wire2"></div>
+  </div>
+
+
+  <script src="main.js"></script>
+  <h5 style="text-align: center; color: white;">Copyright &#169; 2020 Yasin Ansari<br/>
+
+    <script language="JavaScript" type="text/javascript">
+    document.write("Last Modified:  " + document.lastModified);
+    </script></h5>
+
+</body>
+
+</html>

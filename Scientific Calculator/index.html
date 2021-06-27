@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+  <title>SuperCalculator - Scientific Calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="calculator">
+    <h1 class="heading">Scientific Calculator</h1>
+    <input type="text" id="screen" id="screens" maxlength="30">
+    <div class="calc-buttons">
+
+
+
+      <div class="functions-one">
+        
+        <button class="button basic-stuff">(</button>
+        <button class="button basic-stuff">)</button>
+        <button class="button triggers">DEL</button>
+        <button class="button triggers">AC</button>
+        <button class="button numbers">7</button>
+        <button class="button numbers">8</button>
+        <button class="button numbers">9</button>
+        <button class="button basic-stuff">/</button>
+       
+        <button class="button numbers">4</button>
+        <button class="button numbers">5</button>
+        <button class="button numbers">6</button>
+        <button class="button basic-stuff">*</button>
+        
+        <button class="button numbers">3</button>
+        <button class="button numbers">2</button>
+        <button class="button numbers">1</button>
+        <button class="button basic-stuff">-</button>
+        <button class="button basic-stuff">.</button>
+        <button class="button numbers">0</button>
+        
+        <button class="button basic-stuff">+</button>
+        
+        <button class="button big triggers" onclick="myFunction()">=</button>
+      </div>
+
+
+
+
+      <div class="functions-two">
+         <!--Extra same one-->
+         <button class="button-blank complex-stuff" onclick="location.href = 'C:/Users/Shabbir/Desktop/HTML%20Projects/SuperCalculator/Unit%20conversion/index.html'">Conv</button>
+         <button class="const complex-stuff" id="myBtn">Const</button>
+         <button class="button-blank complex-stuff" style="font-size: 11px;"  onclick="location.href = 'C:/Users/Shabbir/Desktop/HTML%20Projects/SuperCalculator/Currency%20Conversion/index.html';">Currency</button>
+         <button class="button complex-stuff" id="clear">Back</button>
+
+        <button class="button complex-stuff">%</button>
+        <button class="button complex-stuff">x !</button>
+        <button class="button complex-stuff">x^</button>
+        <button class="button complex-stuff">x ²</button>
+        
+        <button class="button complex-stuff">log</button>
+        <button class="button complex-stuff">ln</button>
+        <button class="button complex-stuff">e</button>
+        <button class="button complex-stuff">√</button>
+        
+        <button class="button complex-stuff">sin</button>
+        <button class="button complex-stuff">cos</button>
+        <button class="button complex-stuff">tan</button>
+        <button class="button complex-stuff">*</button>
+        <button class="button complex-stuff">±</button>
+        <button class="button complex-stuff">&#x003C0;</button>
+        <button class="button complex-stuff">∘</button>
+        <button class="button complex-stuff">rad</button>
+        
+       
+
+
+       
+      </div>
+     
+    </div>
+    <P>Calculation History</P>
+    <div class="history">
+     
+    <div id="history"></div>
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="row">
+        <div class="column">
+          <p style="font-size: 18px; font-weight: bold;">Physics Constants</p>
+          
+          Speed of Light &emsp14;<button class="right button" title="Copy Text" id="text">299792458</button><br>
+          Conductance Quantum&emsp14;<button class="right button" title="Copy Text"
+            id="text">0.00007748091731</button><br>
+          Gravitational Constant (G)&emsp14;<button class="right button" title="Copy Text"
+            id="text">0.00000000006673</button><br>
+          Electric constant&emsp14;<button class="right button" title="Copy Text"
+            id="text">0.0000000000088541</button><br>
+            Plank's Constant &emsp14;<button class="right button" title=".62607004 × 10^-34" id="text">0.000000000000000000000000000000000662607004</button><br>
+            Plank's Length &emsp14;<button class="right button" title="1.6 × 10^-35" id="text">0.000000000000000000000000000000000016</button><br>
+        </div>
+        <div class="column">
+          <br><br> Newtonian constant of gravitation&emsp14;<button class="right button" title="Copy Text"
+            id="text">0.00000000006674</button><br>
+          Magnetic constant&emsp14;<button class="right button" title="Copy Text" id="text">0.000001256</button><br>
+          Molar gas constant&emsp14;<button class="right button" title="Copy Text" id="text">8.31445</button><br>
+          Molar volume of gas&emsp14;<button class="right button" title="Copy Text" id="text">0.022710</button><br>
+          Sackur-Tetrode constant&emsp14;<button class="right button" title="Copy Text" id="text">-1.15170</button><br>
+          Plank's Mass&emsp14;<button class="right button" title="2.176434x10^-8" id="text">0.00000002176434</button><br>
+         
+        </div>
+
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="column">
+          <p style="font-size: 18px; font-weight: bold;">Mathematical Constants</p>
+          Golden Ratio &emsp14;<button class="right button" title="Copy Text" id="text">1.6180</button><br>
+          Euler Mascheroni Constant &emsp14;<button class="right button" title="Copy Text" id="text">0.577251664</button><br>
+          Meissel Mertens Constants&emsp14;<button class="right button" title="Copy Text" id="text">0.26149721</button><br>
+          Omega Constant&emsp14;<button class="right button" title="Copy Text" id="text">0.567143290</button><br>
+          Cahen's Constant&emsp14;<button class="right button" title="Copy Text" id="text">0.64341054</button><br>
+          Landau Ramanunjan Constants &emsp14;<button class="right button" title="Copy Text" id="text">0.764223</button><br>
+          Alladi Grinstead Constant &emsp14;<button class="right button" title="Copy Text" id="text">0.809394020</button><br>
+          Catalan's Constants&emsp14;<button class="right button" title="Copy Text" id="text">0.915965</button><br>
+          Apery's Constants&emsp14;<button class="right button" title="Copy Text" id="text">1.2020569</button><br>
+          
+        </div>
+        <div class="column"><br><br>
+          Conway's Constants&emsp14;<button class="right button" title="Copy Text" id="text">1.303577</button><br>
+          Mill's Constant&emsp14;<button class="right button" title="Copy Text" id="text">1.306377833</button><br>
+          Plastic COnstants&emsp14;<button class="right button" title="Copy Text" id="text">1.324717</button><br>
+          Ramanunjan Soldner Constants&emsp14;<button class="right button" title="Copy Text" id="text">1.451369234</button><br>
+          Porter Constants&emsp14;<button class="right button" title="Copy Text" id="text">1.467078</button><br>
+          Universal Parabolic Constant&emsp14;<button class="right button" title="Copy Text" id="text">2.29558714</button><br>
+          Kinchin's Constants&emsp14;<button class="right button" title="Copy Text" id="text">2.685452</button><br>
+          Niven's Constant&emsp14;<button class="right button" title="Copy Text" id="text">1.705211140</button><br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="jquery-2.1.1.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

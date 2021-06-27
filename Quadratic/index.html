@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	  <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	  <link rel="manifest" href="manifest.json">
+	  <meta name="msapplication-TileColor" content="#ffffff">
+	  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	  <meta name="theme-color" content="#ffffff">
+		<title>SuperCalculator - Quadratic Equlation Calculator</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+<body><center>
+	<h1>The Quadratic Formula Calculator</h1>
+<h2>Please enter the A, B, and C variables:</h2>
+<p><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Quadratic_formula.svg/2000px-Quadratic_formula.svg.png" alt = "Quadratic formula picture goes here" width = 400px></p>
+	<p><h3>Enter the values: </p>
+	<form name=form1>
+		<input type="text" class="ipt" name="a" value="" size="1" oninput=miroir()> X<sup>2</sup> + 
+		<input type="text" class="ipt" name="b" value="" size="1" oninput=miroir()> X +
+		<input type="text" class="ipt" name="c" value="" size="1" oninput=miroir()> = 0
+		
+		<label><h2><em>
+		Your equation: <font color="#f0f8ff">
+		<b><output name="aff1"></output>x<sup>2</sup> +  
+		<output name="aff2"></output> x 
+		<output name="aff3"></output> = 0
+		</b></font></em></h2></label>
+		<input type="button" name="calcul" value="Calculate" onClick="main()" onclick="myFunction()" class="btn btn-bubble"></h3>	 
+		<hr><em><h3>Result Area:</h3></em>
+		<textarea cols="65" rows="15" name="result" value="" disabled="yes" id="myTextarea">
+		</textarea>
+		<p id="demo"></p>
+		<br>
+		<input type="reset" name="res" value="Reset" class="btn btn-bubble">
+	</form>
+	<br><br><br><br><br>
+	<script src="main.js">
+	</script>
+</body>
+</html>

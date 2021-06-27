@@ -1,0 +1,67 @@
+
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #209cff 100%, #68e0cf 200%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ipt{
+    width:5em;
+    border-radius:2px;
+    border:none;
+    outline: none;
+    padding:3px;
+    background-color:white;
+    color:black;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight:700;
+    text-align: right;
+}
+.btn-bubble {
+	color: white;
+	background-color: #77b11c;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  }
+  .btn-bubble:hover {
+	-webkit-animation: bubbles 1s forwards ease-out;
+			animation: bubbles 1s forwards ease-out;
+	background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 39% 93% / 1.17em 1.17em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 26% 108% / 1.05em 1.05em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 88% 118% / 1.19em 1.19em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 46% 108% / 1.1em 1.1em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 12% 126% / 0.52em 0.52em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 9% 138% / 0.62em 0.62em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 29% 123% / 0.91em 0.91em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 26% 114% / 0.83em 0.83em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 32% 133% / 1.2em 1.2em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 101% 95% / 0.89em 0.89em, radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, #eeeeff 60%, #eeeeff 65%, rgba(0, 0, 0, 0) 70%) 90% 98% / 1.13em 1.13em;
+	background-color: #77b11c;
+	background-repeat: no-repeat;
+  }
+  
+  @-webkit-keyframes bubbles {
+	100% {
+	  background-position: 38% -21%, 20% 12%, 83% -356%, 42% -362%, 15% -232%, 11% 5%, 28% -377%, 28% -37%, 38% -325%, 95% -262%, 94% -166%;
+	  box-shadow: inset 0 -6.5em 0 #0072c4;
+	}
+  }
+  
+  @keyframes bubbles {
+	100% {
+	  background-position: 38% -21%, 20% 12%, 83% -356%, 42% -362%, 15% -232%, 11% 5%, 28% -377%, 28% -37%, 38% -325%, 95% -262%, 94% -166%;
+	  box-shadow: inset 0 -6.5em 0 #0072c4;
+	}
+  }
+
+  .btn {
+	display: inline-block;
+	text-decoration: none;
+	padding: 0.7em 2.4em;
+	outline: none;
+	border: none;
+	margin-bottom: 1em;
+	font-size: 15px;
+	font-weight: 500;
+  }
+  textarea{
+    font-size: 18px;
+    font-weight: 800;
+    padding: 2em;
+    color: #6e6a56;
+  }

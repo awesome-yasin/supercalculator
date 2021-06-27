@@ -1,0 +1,318 @@
+body {
+  padding-top: 20px;
+  background-color: #0093E9;
+}
+
+h1 {
+  color: #E5E5E5;
+  font-family: 'Poppins', sans-serif;
+ margin-top: 150px;
+  font-weight: 700;
+}
+.seprate{
+  margin-top: 7em;
+  text-align: center;
+  color: #E5E5E5;
+  font-family: 'Poppins', sans-serif;
+ margin-bottom: 2em;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.converter-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.converter-wrapper input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.converter-wrapper span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.converter-wrapper span select {
+  background-color: #263648;
+  color: #fff;
+  font-size: inherit;
+  padding: 10px;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  border-radius: 0px;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: none; /* hide default arrow in chrome OSX */
+}
+
+.converter-wrapper span::before,
+.converter-wrapper span::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.converter-wrapper span::after { /*  Custom dropdown arrow */
+  content: "\25BC";
+  height: 1em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.5em;
+  top: 50%;
+  margin-top: -.5em;
+  color: #131B24;
+}
+
+.converter-wrapper span::before { /*  Custom dropdown arrow cover */
+  width: 2.5em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0;
+  background-color: #202E3C;
+}
+
+.converter-side-a,
+.converter-side-b {
+  float: left;
+  margin-top: 10px;
+  box-sizing: border-box;
+  width: 45%;
+}
+
+.converter-equals {
+  float: left;
+  box-sizing: border-box;
+  width: 10%;
+  color: #FFF;
+  font-size: 2.4em;
+  line-height: 0;
+  text-align: center;
+}
+
+.converter-side-a {
+  padding-right: 10px;
+}
+
+.converter-side-b {
+  padding-left: 10px;
+}
+
+.currency-converter {
+  font-family: helvetica;
+ margin-top: 10em;
+  color: #333;
+}
+.currency-converter h3 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-image: linear-gradient(to right, #16d6d9, #96cc29);
+  padding: 1em;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: uppercase;
+}
+.currency-converter p {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+  
+  box-sizing: border-box;
+}
+
+.currency-converter__block {
+  width: 19%;
+  display: inline-block;
+  padding: 1em;
+  box-sizing: border-box;
+  text-align: right;
+  vertical-align: top;
+}
+.currency-converter__block input {
+  width: 100%;
+  padding: 1em;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3em;
+  overflow: hidden;
+  outline: none;
+  box-sizing: border-box;
+  border-bottom: solid 5px;  /* made thicker for illustration purposes only */
+  border-image: linear-gradient(to right, rgb(254, 113, 53), rgb(55, 154, 214)) 1 20%;
+}
+
+.currency-converter__block input:focus {
+  border-bottom: solid 5px;
+  border-image: linear-gradient(to right, rgb(34, 201, 104), rgb(226, 204, 9)) 1 20%;
+  animation: animatedgradient 3s ease alternate infinite;
+}
+.currency-converter__block label {
+  width: 100%;
+  display: block;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.1em;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  color: white;
+  /*color: #656565;*/
+}
+
+.currency-converter__block--pound {
+  width: 100%;
+  max-width: 30em;
+  display: block;
+  padding: 1em;
+  box-sizing: border-box;
+  
+  vertical-align: top;
+  margin: 0 auto;
+}
+.currency-converter__block--pound input {
+  width: 89%;
+  padding: 1em;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.3em;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 5px solid #f07228;
+}
+.currency-converter__block--pound label {
+  width: 100%;
+  display: block;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  color: #656565;
+}
+
+.pound:before {
+  content: "£";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.euro:before {
+  content: "€";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+.dollar:before {
+  content: "$";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+.india:before {
+  content: "₹";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+.russia:before {
+  content: "₽";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+.korea:before {
+  content: "₩";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+.japan:before {
+  content: "¥";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+.romania:before {
+  content: "L";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+.dubai:before {
+  content: "د.إ";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+.saudi:before {
+  content: "﷼";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}
+.turkey:before {
+  content: "₺";
+  display: block;
+  width: 20%;
+  position: relative;
+  background: #f07228;
+ text-align: center;
+  font-size: 1.3em;
+  color: #fff;
+}

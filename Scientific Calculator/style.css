@@ -1,0 +1,204 @@
+body{
+  margin:0;
+   padding:0px;
+   background-color: #1698da;
+  }
+
+  .calculator {
+   width: 620px;
+   position: absolute;
+   height: 430px;
+  background-color: beige;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 12% 30%;
+  overflow: scroll;
+  top: -80px;
+  }
+  .heading{
+    margin-top: 0;
+    text-align: center;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  input[type=text] {
+  width: 100%;
+	  height: 45px;
+	  border-radius: 5px;
+    border: 0px;
+    font-size: 22px;
+	  background-color: #333333;
+	  color: #d9d9d9;
+	  padding: 0 5px 0 5px;
+	  margin: 0 3px 10px 1px;
+  
+  }
+  
+  .calc-buttons {
+	  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  }
+  .button {
+	 margin: 3px;
+  width: 63px;
+  border: none;
+  height: 50px;
+  outline: 0;
+  border-radius: 4px;
+  color: #000000;
+  cursor: pointer;
+  }
+  .button-blank{
+    margin: 3px;
+    width: 63px;
+    border: none;
+    height: 50px;
+    outline: 0;
+    border-radius: 4px;
+    color: #000000;
+    cursor: pointer;
+  }
+  .button:active {
+    transform: translateY(1px);
+    border-bottom-width: 2px;
+    box-shadow: none;
+  }
+  button:hover {
+	background-color: hsla(180, 100%, 40%, 0.3);
+	transition: .2s;
+  }
+  .const {
+    margin: 3px;
+   width: 63px;
+   border: none;
+   height: 50px;
+   border-radius: 4px;
+   color: #000000;
+   cursor: pointer;
+   }
+   
+   .const:hover {
+   background-color: hsla(180, 100%, 40%, 0.3);
+   transition: .2s;
+   }
+  
+  
+  
+  .functions-one {
+	  width: 290px;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-evenly;
+  }
+  
+  
+  .functions-two {
+  width: 280px;
+ 
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-evenly;
+  }
+  
+  .triggers {
+	  background-color: #ffc266;
+  }
+  
+  
+  
+  .numbers {
+	  background-color: #999999;
+  }
+  
+  .basic-stuff {
+	  background-color: #80d4ff;
+  }
+  
+  .complex-stuff {
+	  background-color:rgba(168, 224, 20, 0.9);
+  }
+  .complex-stuff:hover {
+	  background-color:rgba(174, 195, 20, 0.9);
+  }
+  .history {
+    
+    width: 80%;
+    color: white;
+    background-color: #636363;
+    border-radius: 5px;
+    margin-top: 16px;
+    
+    padding: 15px;
+    box-shadow: 0px 5px 10px #444444 inset;
+  }
+  #history{
+    width: 100%;
+  }
+  
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .right{
+    width: 140px;
+    overflow: hidden;
+  }
+  .right:hover{
+    overflow: none;
+    width: 180px;
+  }
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .calculator {
+      width: 320px;
+      top: 0px;
+      margin: 12% 10%;
+    }
+
+  }
