@@ -60,3 +60,42 @@ Initially it has 2 fractions but you can add n no of fraction to perform operati
 Stastics Claculator consisits of operation like finding Sum, Sum of Squares, Mean, Population Variance (σ^2), Population Standard Deviation (σ), Sample Variance (s^2), Sample Standard Deviation (s), Geometric Mean, Quadratic Mean, Median, Mode, Range, First Quartile, Third Quartile, Interquartile Range, Mid-Range, Sorting in assending and decendind order, Minimum, Maximum.
 
 <img src="screeenshot/stat1.png" width="350" title="hover text"><img src="screeenshot/stat2.png" width="350" title="hover text">
+
+## 8. QR Code Scanner and Creator
+
+Read QR code and create QR code including text, URL, ISBN, phone number, sms, contact, calendar, email, location.
+
+<img src="screeenshot/qr.png" width="650" title="hover text">
+
+### Demo: https://qr-generatr.netlify.app/
+
+## 9. Quadratic Equation Solver
+
+This online calculator is a quadratic equation solver that will solve a second-order polynomial equation such as ax2 + bx + c = 0 for x, where a ≠ 0, using the quadratic formula.
+
+The calculator solution will show work using the quadratic formula to solve the entered equation for real and complex roots. Calculator determines whether the discriminant (b^2−4ac) is less than, greater than or equal to 0.
+
+<img src="screeenshot/quad.png" width="650" title="hover text">
+
+### Demo: https://quadratic-calculator.netlify.app/
+
+## 10. Loan Calculator
+
+Calculate Loan by entering Principal, Rate of Intrest and Time in months with Detailed Monthly Payment Table. It will give output of Total Payment with Detailed Monthly payment and monthly intrest.
+
+It has Clear UI and Totally responsive Input and output Table with Logics Given in Pure Javascript.
+
+<img src="screeenshot/loan1.png" width="350" title="hover text"> <img src="screeenshot/loan2.png" width="350" title="hover text">
+
+### Demo: https://emi-calculatorr.netlify.app/
+
+## 11. Mortage/Home Loan Calculator
+
+This is another Loan Calculator with aditional functionality of calculating Loan and Home load with aditional taxes included like annual Tax and annual insurance.
+
+It contain more beautifual UI than Previous one with fully responsive and sliders input for better user experience.
+
+<img src="screeenshot/mortage.png" width="650" title="hover text">
+
+### Demo: https://mortage.netlify.app/
+                                                                                                                                                                                                                                                 
